@@ -1,5 +1,4 @@
 // CODE QUEST: Escape from the Compiler Kingdom
-// Region 1: Variables Village + Region 2: Loop Forest + Array Cave + Function Falls
 
 #include <stdio.h>
 #include <string.h>
