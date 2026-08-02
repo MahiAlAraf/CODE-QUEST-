@@ -1,5 +1,3 @@
-// CODE QUEST: Escape from the Compiler Kingdom
-
 #include <stdio.h>
 #include <string.h>
 
@@ -10,10 +8,14 @@ int HP = 100;
 int Max_HP = 100;
 int Level = 1;
 int XP = 0;
-int Iron_shield = 0;   // set to 1 when the player buys the Iron Shield (halves next wrong-answer penalty)
-
+int Iron_shield = 0;   
+int Pause;
 //_______________________function prototypes_____________________
 void show_menu();
+void file_reset();
+int file_open();
+void file_save();
+void introduction();
 void new_game();
 void enter_to_continue();
 void current_status();
@@ -58,13 +60,13 @@ void show_menu() {
     printf("================================================\n");
     printf("  CODE QUEST: Escape from the Compiler Kingdom\n");
     printf("================================================\n");
-    printf("1. New Game\n2. Exit\n");
+    printf("1. New Game\n2. Continue\n3. Exit\n");
     printf("Enter choice: ");
 
     while (1) {
         scanf("%d", &choice);
         flush_input();
-        if (choice == 1 || choice == 2) {
+        if (choice == 1 || choice == 2 || choice == 3) {
             break;
         } else {
             printf("Invalid Input...\nEnter properly: ");
@@ -72,15 +74,49 @@ void show_menu() {
     }
 
     if (choice == 1) {
+        file_reset();
+        introduction();
+        new_game();
+    } else if (choice == 2) {
+        if (!file_open()) {
+            printf("\nNo saved game found. Starting a new game...\n");
+            file_reset();
+            introduction();
+            file_open();
+        }
         new_game();
     } else {
         printf("\n   Goodbye, Apprentice.\n");
         printf("==========game end===========\n");
     }
 }
-
-//___________________________________________________________NEW GAME____________________________________________________
-void new_game() {
+void file_reset()
+{
+    FILE *reset;
+    reset=fopen("save.txt","w");
+    fprintf(reset, "%d %d %d %d %d",1,100,0,0,0);
+    fclose(reset);
+}
+int file_open()
+{
+    FILE *save;
+    save=fopen("save.txt","r");
+    if (save == NULL) {
+        return 0;
+    }
+    fscanf(save,"%d %d %d %d %d",&Pause,&HP,&Coin,&XP,&Iron_shield);
+    fclose(save);
+    return 1;
+}
+void file_save()
+{
+    FILE *save;
+    save=fopen("save.txt","w");
+    fprintf(save,"%d %d %d %d %d",Pause,HP,Coin,XP,Iron_shield);
+    fclose(save);
+}
+void introduction() 
+{
     printf("\n--------------------------------------------------------------\n");
     printf("              The Compiler Kingdom is broken.\n");
     printf("       A virus called the NULL POINTER shattered its code.\n");
@@ -94,140 +130,203 @@ void new_game() {
 
     printf("\nWelcome %s, your journey begins!\n", Name);
     enter_to_continue();
+}
+
+//___________________________________________________________NEW GAME____________________________________________________
+void new_game() {
 
     while (1) {
-        // reset stats at the start of every attempt
-        HP = 100;
-        Max_HP = 100;
-        XP = 0;
-        Coin = 0;
-        Level = 1;
-        Iron_shield = 0;
-
-        HP = variable_village();
-        if (HP <= 0) {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
-
-        HP = loop_forest();
-        if (HP <= 0) {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
-
-        current_status();
-        enter_to_continue();
-        printf(" =========================================================================\n");
-        printf("       Wizard of Iteration: \"You have restored the second fragment.      \n");
-        printf("             But something's wrong deeper in the kingdom.              \n");
-        printf("      The caves beyond the forest are collapsing. Tunnels vanishing,      \n");
-        printf("        paths caving in without warning. That's not natural.          \n");
-        printf("          Something is reading memory it was never meant to touch.\"        \n");
-        printf("        Wizard of Iteration: \"Go to Array Cave, apprentice %s.       \n", Name);
-        printf(  "Whatever broke the loops here..it's reaching further than we thought.\"\n");
-        printf("=========================================================================\n");
-        enter_to_continue();
-        After_forest_EQuest();
-        current_status();
-        enter_to_continue();
-
-        HP = array_cave();
-        if (HP <= 0) {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
-        printf("-----------------------------------------------------------------------------------------\n");
-        printf("%s : OHH, at last back in one piece. I guess there should be Function Falls ahead.\n", Name);
-        current_status();
-        printf("Need to do something about it\n");
-        printf("Want to search for any store? (y/n): ");
-        char store_choice = Yes_No_loop();
-        if (store_choice == 'y' || store_choice == 'Y') {
-            After_cave_shop();
-        } else {
-            printf("OK, to the next phase then...\n");
-        }
-        enter_to_continue();
-        HP = Function_falls();
-        if (HP <= 0) {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
-        current_status();
-        HP=Pointer_peak();                   //  709
-        if(HP<=0)
+      file_open();
+      if(Pause==1)
         {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
-        enter_to_continue();
-        current_status();
-        enter_to_continue();
-        //__________________________________LINK from Peakpointer to nul pointer ______________________________
-        printf("+----------------------------------------------------------+\n");
-        printf("|                                                            |\n");
-        printf("|   You survived Pointer Peak.                              |\n");
-        printf("|                                                            |\n");
-        printf("|   \"But something worse waits ahead. A broken pointer      |\n");
-        printf("|    that grew into a virus -- the NULL POINTER. It          |\n");
-        printf("|    doesn't break things. It erases them. Rooms, names,     |\n");
-        printf("|    whole lands -- gone, like they never had an address.\"   |\n");
-        printf("|                                                            |\n");
-        printf("|   \"Keep it lit,\" the guard says, looking at your torch.   |\n");
-        printf("|    \"You'll need it where you're going.\"                   |\n");
-        printf("|                                                            |\n");
-        printf("|   The road ahead fades into fog...                        |\n");
-        printf("|                                                            |\n");
-        printf("+----------------------------------------------------------+\n");
-        enter_to_continue();
-        printf("\n\n%s : I think I should take some precaution steps before facing the NULL POINTER\n", Name);
-        printf("%s : Let's head back to the store and see what I can grab.\n\n", Name);
-        printf("\n\n----------On the way to the store, %s found a man seeking his help!", Name);
-        printf("\nWant to see? Or ignore him?\ny/n: ");
-
-        char decision = Yes_No_loop();
-        if (decision == 'y' || decision == 'Y')
-        {
-            Precaution_EQuest();
-        }
-        else
-        {
-            printf("Are you sure you want to avoid this? This might be a great chance to win some coins...\n");
-            printf("y/n: ");
-            char decision2 = Yes_No_loop();
-            if (decision2 == 'y' || decision2 == 'Y')
+            HP = variable_village();
+            if (HP <= 0) 
             {
-                printf("%s : Sorry sir, but I am in a hurry, I have not much time.\n\n", Name);
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
+            }
+            Pause=2;
+            file_save();
+        }
+        enter_to_continue();
+
+       if (Pause==2)
+        {
+            HP = loop_forest();
+            if (HP <= 0)
+            {
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
+            }
+            Pause=3;
+            file_save();
+        }
+        enter_to_continue();
+        if(Pause==3)
+        {
+            current_status();
+            enter_to_continue();
+            printf(" =========================================================================\n");
+            printf("       Wizard of Iteration: \"You have restored the second fragment.      \n");
+            printf("             But something's wrong deeper in the kingdom.              \n");
+            printf("      The caves beyond the forest are collapsing. Tunnels vanishing,      \n");
+            printf("        paths caving in without warning. That's not natural.          \n");
+            printf("          Something is reading memory it was never meant to touch.\"        \n");
+            printf("        Wizard of Iteration: \"Go to Array Cave, apprentice %s.       \n", Name);
+            printf(  "Whatever broke the loops here..it's reaching further than we thought.\"\n");
+            printf("=========================================================================\n");
+            enter_to_continue();
+            After_forest_EQuest();
+            file_save();
+            current_status();
+            enter_to_continue();
+            Pause=4;
+        }
+        enter_to_continue();
+        if(Pause==4)
+        {
+            HP = array_cave();
+            if (HP <= 0) {
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
+            }
+            Pause=5;
+            file_save();
+        }
+        enter_to_continue();
+        if(Pause==5)
+        {
+            printf("-----------------------------------------------------------------------------------------\n");
+            printf("%s : OHH, at last back in one piece. I guess there should be Function Falls ahead.\n", Name);
+            current_status();
+            printf("Need to do something about it\n");
+            printf("Want to search for any store? (y/n): ");
+            char store_choice = Yes_No_loop();
+            if (store_choice == 'y' || store_choice == 'Y')
+            {
+                After_cave_shop();
+                file_save();
+            } 
+            else 
+            {
+                printf("OK, to the next phase then...\n");
+            }
+            Pause=6;
+            file_save();
+        }
+        
+        enter_to_continue();
+        if(Pause==6)
+        {
+            HP = Function_falls();
+            if (HP <= 0) {
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
+            }
+            Pause=7;
+            file_save();
+        }
+        current_status();
+        enter_to_continue();
+        if(Pause==7)
+        {
+            HP = Pointer_peak();
+            if (HP <= 0) {
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
+            }
+            Pause=8;
+            file_save();
+        }
+        enter_to_continue();
+        if(Pause==8)
+        {
+            current_status();
+            enter_to_continue();
+            //__________________________________LINK from Peakpointer to nul pointer ______________________________
+            printf("+----------------------------------------------------------+\n");
+            printf("|                                                            |\n");
+            printf("|   You survived Pointer Peak.                              |\n");
+            printf("|                                                            |\n");
+            printf("|   \"But something worse waits ahead. A broken pointer      |\n");
+            printf("|    that grew into a virus -- the NULL POINTER. It          |\n");
+            printf("|    doesn't break things. It erases them. Rooms, names,     |\n");
+            printf("|    whole lands -- gone, like they never had an address.\"   |\n");
+            printf("|                                                            |\n");
+            printf("|   \"Keep it lit,\" the guard says, looking at your torch.   |\n");
+            printf("|    \"You'll need it where you're going.\"                   |\n");
+            printf("|                                                            |\n");
+            printf("|   The road ahead fades into fog...                        |\n");
+            printf("|                                                            |\n");
+            printf("+----------------------------------------------------------+\n");
+            enter_to_continue();
+            printf("\n\n%s : I think I should take some precaution steps before facing the NULL POINTER\n", Name);
+            printf("%s : Let's head back to the store and see what I can grab.\n\n", Name);
+            printf("\n\n----------On the way to the store, %s found a man seeking his help!", Name);
+            printf("\nWant to see? Or ignore him?\ny/n: ");
+
+            char decision = Yes_No_loop();
+            if (decision == 'y' || decision == 'Y')
+            {
+                Precaution_EQuest();
+                file_save();
             }
             else
             {
-                Precaution_EQuest();
+                printf("Are you sure you want to avoid this? This might be a great chance to win some coins...\n");
+                printf("y/n: ");
+                char decision2 = Yes_No_loop();
+                if (decision2 == 'y' || decision2 == 'Y')
+                {
+                    printf("%s : Sorry sir, but I am in a hurry, I have not much time.\n\n", Name);
+                }
+                else
+                {
+                    Precaution_EQuest();
+                    file_save();
+                }
+            }
+            precaution();
+            Pause=9;
+            file_save();
+            enter_to_continue();
+        }
+
+        if(Pause==9)
+        {
+            HP = final_stage();
+            if (HP <= 0) {
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
+            }
+            Pause=10;
+            file_save();
+        }
+        enter_to_continue();
+        if (Pause==10)
+        {
+            HP=NUL_POINTER();
+            if(HP<=0)
+            {
+                fallen_statement();
+                enter_to_continue();
+                file_reset();
+                continue;
             }
         }
-        precaution();
-        enter_to_continue();
-
-        HP=final_stage();
-        if(HP<=0)
-        {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
-
-        HP=NUL_POINTER();
-        if(HP<=0)
-        {
-            fallen_statement();
-            enter_to_continue();
-            continue;
-        }
+        
         break;
     }
 }
@@ -416,7 +515,6 @@ int variable_village() {
     printf("A fragment of the Great Algorithm is restored!\n");
     printf("Elder Byte: \"Well done. The forest ahead awaits your help.\"\n");
     current_status();
-    enter_to_continue();
     printf("\n");
 
     return HP;
@@ -938,7 +1036,7 @@ void Precaution_EQuest()
     printf("Traveler : Thank you, here's a little something for your trouble.\n");
     printf("---------------------------------------------------------\n");
     current_status();
-    enter_to_continue();
+    file_save();
 }
 //___________________________________precoursion___________________________________________
 void precaution()
@@ -1128,6 +1226,7 @@ int NUL_POINTER()
         if (answer == 20)
         {
             Congratulations();
+            file_reset();
             solved = 1;
             break;
         }
@@ -1222,13 +1321,13 @@ void Congratulations()
 }
 
 //__________________UTILITY_____________
-// clears everything left in the input buffer up to and including the next newline
+
 void flush_input() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
-// waits for the player to press Enter (buffer is always clean here, thanks to flush_input)
+
 void enter_to_continue() {
     printf("\nPress Enter to continue...");
     getchar();
