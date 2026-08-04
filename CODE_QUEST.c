@@ -10,11 +10,18 @@ int Level = 1;
 int XP = 0;
 int Iron_shield = 0;   
 int Pause;
+int Vibranium_sheld=0;
+int dubble_XP=0;
 //_______________________function prototypes_____________________
 void show_menu();
+void MarketPlace();
+void MarketPlace_items();
 void file_reset();
 int file_open();
 void file_save();
+void Market_open();
+void Market_save();
+void Market_reset();
 void introduction();
 void new_game();
 void enter_to_continue();
@@ -49,6 +56,7 @@ int main() {
 //__________________MAIN MENU_____________
 void show_menu() {
     int choice;
+    file_open();
     printf(
 "   ______   ____  \n"
 "  / ____/  / __ \\ \n"
@@ -60,18 +68,10 @@ void show_menu() {
     printf("================================================\n");
     printf("  CODE QUEST: Escape from the Compiler Kingdom\n");
     printf("================================================\n");
-    printf("1. New Game\n2. Continue\n3. Exit\n");
+    printf("1. New Game\n2. Continue\n3. MarketPlace\n4. Exit\n");
     printf("Enter choice: ");
 
-    while (1) {
-        scanf("%d", &choice);
-        flush_input();
-        if (choice == 1 || choice == 2 || choice == 3) {
-            break;
-        } else {
-            printf("Invalid Input...\nEnter properly: ");
-        }
-    }
+    choice=answer_input_loop();
 
     if (choice == 1) {
         file_reset();
@@ -85,7 +85,19 @@ void show_menu() {
             file_open();
         }
         new_game();
-    } else {
+    } else if (choice == 3) {
+        if(Pause==1 || XP <25)
+        {
+            printf("Marketplace is locked. You need to reach at least level \"Noob\" to access it.\n");
+            show_menu();
+        }
+        else
+        {
+            MarketPlace();
+            show_menu();
+        }
+    }
+    else{
         printf("\n   Goodbye, Apprentice.\n");
         printf("==========game end===========\n");
     }
@@ -115,6 +127,128 @@ void file_save()
     fprintf(save,"%d %d %d %d %d",Pause,HP,Coin,XP,Iron_shield);
     fclose(save);
 }
+void Market_reset()
+{
+    FILE *reset;
+    reset=fopen("market.txt","w");
+    fprintf(reset, "%d %d",0,0);
+    fclose(reset);
+}
+void Market_open()
+{
+    FILE *open;
+    open=fopen("market.txt","r");
+    if(open == NULL)
+    {
+        Market_reset();
+        open=fopen("market.txt","r");
+    }
+    fscanf(open,"%d %d",&Vibranium_sheld,&dubble_XP);
+    fclose(open);
+}
+void Market_save()
+{
+    FILE *save;
+    save=fopen("market.txt","w");
+    fprintf(save, "%d %d",Vibranium_sheld,dubble_XP);
+    fclose(save);
+}
+void MarketPlace()
+{
+    Market_open();
+    printf("\n====================MARKETPLACE====================\n");
+    printf("Welcome to the Marketplace, %s!\n", Name);
+    printf("Here you can buy special items to aid your journey.\n");
+    printf("Your current coins: %d\n", Coin);
+    while(1)
+  {
+        MarketPlace_items();
+        file_open();
+        int choice;
+        choice = answer_input_loop();
+
+        if (choice == 1) {
+            if (Coin >= 200) {
+                Vibranium_sheld = 1;
+                Coin =Coin - 200;
+                printf("You have purchased the Vibranium Shield!\n");
+                break;
+            } 
+            else 
+            {
+                printf("Insufficient coins for Vibranium Shield.\n");
+                continue;
+            }
+        } else if (choice == 2) {
+            if (Coin >= 150) {
+                dubble_XP = 1;
+                Coin =Coin - 150;
+                printf("You have purchased the Double XP Potion!\n");
+                break;
+            } else {
+                printf("Insufficient coins for Double XP Potion.\n");
+                continue;
+            }
+        } else if (choice == 3) {
+            if(HP==Max_HP)
+            {
+                printf("You are already at maximum HP. No need to buy HP drops.\n");
+                continue;
+            }
+            else
+            {
+                printf("How many HP drops would you like to buy? (1-25): ");
+                int drops;
+                while(1)
+               {
+                    scanf("%d", &drops);
+                    if(drops >= 1 && drops <= 25)
+                    {
+                        break;
+                    }
+                     else
+                    {
+                      printf("Invalid input. Please enter a number between 1 and 25: ");
+                    }
+                }
+                if (Coin >= (drops * 4)) {
+                    HP =HP + drops;
+                    if (HP > Max_HP) {
+                        HP = Max_HP;
+                    }
+                    Coin = Coin - (drops * 4);
+                    printf("You have purchased %d HP drops! Your current HP: %d\n", drops, HP);
+                    break;
+                } else {
+                    printf("Insufficient coins for %d HP drops.\n", drops);
+                    continue;
+                }
+            }
+        }
+        else
+        {
+            printf("==========================");
+            printf("  Exiting Marketplace.\n");
+            break;
+        }
+
+    }
+    Market_save();
+    file_save();
+}
+void MarketPlace_items()
+{
+    printf("--------------------------------------------------------------------------------------------------\n");
+    printf("1. Vibranium Shield            (Prevents all HP loss for 1 battle)        -       200 coins\n");
+    printf("2. Double XP Potion            (Doubles XP rewards for next battle)       -       150 coins\n");
+    printf("3. HP Drop                           (One drop recovers 1 HP)             -       4 coins per drop\n");
+    printf("                                         Maximum 25 HP\n\n");
+    printf("4. Exit Marketplace\n");
+    printf("--------------------------------------------------------------------------------------------------\n");
+    printf("Enter your choice: ");
+}
+    
+
 void introduction() 
 {
     printf("\n--------------------------------------------------------------\n");
@@ -407,6 +541,7 @@ int correct_answer(char question[], char option[4][60], int correctAns,
                     int HP_Minus_if_wrong, int Reward_Coin, int reward_XP,
                     char explanation[4][150]) {
     int i, answer, is_wrong;
+    Market_open();
 
     printf("\n%s\n", question);
     for (i = 0; i < 4; i++) {
@@ -416,6 +551,12 @@ int correct_answer(char question[], char option[4][60], int correctAns,
     answer = answer_input_loop();
 
     if (answer == correctAns) {
+        if(dubble_XP==1)
+        {
+            reward_XP=reward_XP*2;
+            dubble_XP=0;
+            printf("Your Double XP Potion doubles your XP reward!\n");
+        }
         printf("Correct!...\n+%d XP  +%d Coin\n", reward_XP, Reward_Coin);
         XP = XP + reward_XP;
         Coin = Coin + Reward_Coin;
@@ -423,7 +564,12 @@ int correct_answer(char question[], char option[4][60], int correctAns,
     } else {
         int actual_penalty = HP_Minus_if_wrong;
         printf("Wrong! The correct answer is: %s\n", option[correctAns - 1]);
-        if (Iron_shield == 1) {
+        if (Vibranium_sheld == 1) {
+            actual_penalty = 0;
+            Vibranium_sheld = 0;
+            printf("Your Vibranium Shield absorbs all the damage!\n");
+        }
+        else if (Iron_shield == 1) {
             actual_penalty = actual_penalty / 2;
             Iron_shield = 0;
             printf("Your Iron Shield absorbs half the damage!\n");
@@ -436,6 +582,7 @@ int correct_answer(char question[], char option[4][60], int correctAns,
         HP_Bar();
         is_wrong = 1;
     }
+    Market_save();
 
     printf("Want to see why?...\n");
     char yes;
@@ -734,9 +881,8 @@ void After_cave_shop()
     int Choose;
     printf("  Items                            Effects                                Price\n\n");
     printf("1.Elixir                       restore +50HP                             -30coins\n");
-    printf("2.Iron Sheild             cancel panalty HP for 1 time                   -175coins\n");
-    printf("3.XP Potion              Duubble XP for next chalange                    -150coins\n");
-    printf("4.Skip                       continue journey, no cost                      --\n");
+    printf("2.Iron Sheild             cancel panalty HP by 50%%                   -175coins\n");
+    printf("3.Skip                       continue journey, no cost                      --\n");
     printf("Enter Choose: ");
     while(1)
     {
@@ -754,10 +900,18 @@ void After_cave_shop()
             } else {
                 printf(".... Insufficient Coins \nYou have %d coins.\nPick something else...\n", Coin);
             }
-        } else if (Choose == 2||Choose==3) {
-            printf(" Insufficient coin...\npeak something else..");
+        } else if (Choose == 2) {
+            if (Coin >= 175) {
+                printf("Iron Shield obtained\nHP penalty canceled by 50%% for the next wrong answer.\n");
+                Coin = Coin - 175;
+                Iron_shield = 1;
+                current_status();
+                break;
+            } else {
+                printf(".... Insufficient Coins \nYou have %d coins.\nPick something else...\n", Coin);
+            }
         }
-        else if(Choose==4)
+        else if(Choose==3)
         {
             printf("OK, no purchase made.\n");
             break;
@@ -1222,8 +1376,14 @@ int NUL_POINTER()
     while (chance <= 3)
     {
         printf("Answer :");
-        scanf("%d", &answer);
-        if (answer == 20)
+        if(scanf("%d", &answer) != 1) 
+        {
+            printf("Invalid input. Please enter an integer.\n");
+            flush_input(); 
+            continue; 
+        }
+        
+        else if (answer == 20)
         {
             Congratulations();
             file_reset();
