@@ -14,6 +14,9 @@ int Vibranium_sheld=0;
 int dubble_XP=0;
 //_______________________function prototypes_____________________
 void show_menu();
+int profile_open();
+void profile_save();
+void profile_reset();
 void MarketPlace();
 void MarketPlace_items();
 void file_reset();
@@ -26,6 +29,7 @@ void introduction();
 void new_game();
 void enter_to_continue();
 void current_status();
+void level_status();
 void flush_input();
 void HP_Bar();
 int answer_input_loop();
@@ -68,7 +72,7 @@ void show_menu() {
     printf("================================================\n");
     printf("  CODE QUEST: Escape from the Compiler Kingdom\n");
     printf("================================================\n");
-    printf("1. New Game\n2. Continue\n3. MarketPlace\n4. Exit\n");
+    printf("1. New Game\n2. Continue\n3. MarketPlace\n4. Profile\n5. Exit\n");
     printf("Enter choice: ");
 
     choice=answer_input_loop();
@@ -96,11 +100,55 @@ void show_menu() {
             MarketPlace();
             show_menu();
         }
+    } else if (choice == 4) {
+        if(profile_open()==0)
+        {
+            printf("\nNo profile found.\n\n\n");
+        }else{
+            printf("\nProfile loaded successfully.\n");
+            profile_open();
+            file_open();
+            printf("\nProfile Name: %s\n", Name);
+            printf("Current HP    :     %d\n", HP);
+            printf("Current XP    :     %d\n", XP);
+            level_status();
+            printf("Current Coins :     %d\n\n\n", Coin);
+        }
+        show_menu();
     }
     else{
         printf("\n   Goodbye, Apprentice.\n");
         printf("==========game end===========\n");
     }
+}
+void profile_reset()
+{
+    FILE *reset;
+    reset=fopen("profile.txt","w");
+    fclose(reset);
+}
+void profile_save()
+{
+   printf("Enter your name: ");
+    scanf("%s",Name);
+    flush_input();
+    printf("\nWelcome %s, your journey begins!\n", Name);
+    FILE *save;
+    save=fopen("profile.txt","w");
+    fprintf(save, "%s",Name);
+    fclose(save);
+    enter_to_continue();
+}
+int profile_open()
+{
+    FILE *save;
+    save=fopen("profile.txt","r");
+    if (save == NULL) {
+        return 0;
+    }
+    fscanf(save,"%s\n",Name);
+    fclose(save);
+    return 1;
 }
 void file_reset()
 {
@@ -258,12 +306,8 @@ void introduction()
     printf("      Fix 4 lands. Face the Null Pointer. Save the kingdom.\n");
     printf("----------------------------------------------------------------\n\n");
 
-    printf("Enter your name: ");
-    scanf("%s", Name);
-    flush_input();
-
-    printf("\nWelcome %s, your journey begins!\n", Name);
-    enter_to_continue();
+    profile_save();
+    profile_open();
 }
 
 //___________________________________________________________NEW GAME____________________________________________________
@@ -491,6 +535,10 @@ void current_status() {
     printf("\n\n<------------------your current status---------------->\n");
     printf("       %d HP  ;   %d   XP    ;    %d   Coins\n", HP, XP, Coin);
     HP_Bar();
+    level_status();
+}
+void level_status()
+{
     if (XP > 85) {
         printf("    Level  :   Expert\n");
     } else if (XP > 75) {
@@ -500,7 +548,7 @@ void current_status() {
     } else if (XP > 25) {
         printf("    Level    :   Noob\n");
     } else {
-        printf("    Level     :    Boot\n");
+        printf("    Level     :  Beginner\n");
     }
 }
 
