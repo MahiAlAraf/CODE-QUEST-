@@ -1,0 +1,8 @@
+Compiler	                                   Command
+
+GCC                --               	gcc CODE_QUEST.c utilities.c -o CODE_QUEST
+Clang              --           	clang CODE_QUEST.c utilities.c -o CODE_QUEST
+MSVC               --               	cl CODE_QUEST.c utilities.c
+
+
+after command run the game :           ./CODE_QUEST
