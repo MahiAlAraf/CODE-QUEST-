@@ -15,6 +15,7 @@ int dubble_XP=0;
 //_______________________function prototypes_____________________
 void clear_screen();
 void enter_to_continue();
+char continue_or_back();
 void current_status();
 void level_status();
 void flush_input();
@@ -37,7 +38,7 @@ void Market_open();
 void Market_save();
 void Market_reset();
 void introduction();
-void new_game();
+char new_game();
 void fallen_statement();
 int variable_village();
 int loop_forest();
@@ -129,7 +130,11 @@ void show_menu() {
         introduction();
         enter_to_continue();
         clear_screen();
-        new_game();
+        if(new_game()=='B') 
+        {
+            clear_screen();
+            show_menu();
+        }
     } else if (choice == 2) {
         clear_screen();
         if (file_open() == 0) {
@@ -141,7 +146,11 @@ void show_menu() {
             profile_open();
         }
         clear_screen();
-        new_game();
+        if(new_game()=='B') 
+        {
+            clear_screen();
+            show_menu();
+        }
     } else if (choice == 3) {
         if(Pause==1 || XP <=25)
         {
@@ -384,7 +393,7 @@ void introduction()
 }
 
 //___________________________________________________________NEW GAME____________________________________________________
-void new_game() {
+char new_game() {
 
     while (1) {
       file_open();
@@ -401,7 +410,7 @@ void new_game() {
             }
             Pause=2;
             file_save();
-            enter_to_continue();
+            if(continue_or_back()=='R') return 'B';
             clear_screen();
         }
        if (Pause==2)
@@ -418,7 +427,7 @@ void new_game() {
             Pause=3;
             file_save();
             current_status();
-            enter_to_continue();
+            if(continue_or_back()=='R') return'B';
             clear_screen();
         }
         if(Pause==3)
@@ -436,7 +445,7 @@ void new_game() {
             After_forest_EQuest();
             file_save();
             current_status();
-            enter_to_continue();
+            if(continue_or_back()=='R') return'B';
             clear_screen();
             Pause=4;
         }
@@ -452,7 +461,7 @@ void new_game() {
             }
             Pause=5;
             file_save();
-            enter_to_continue();
+            if(continue_or_back()=='R') return'B';
             clear_screen();
         }
         if(Pause==5)
@@ -474,7 +483,7 @@ void new_game() {
             }
             Pause=6;
             file_save();
-            enter_to_continue();
+            if(continue_or_back()=='R') return'B';
             clear_screen();
         }
         if(Pause==6)
@@ -490,7 +499,7 @@ void new_game() {
             Pause=7;
             file_save();
             current_status();
-            enter_to_continue();
+            if(continue_or_back()=='R') return'B';
             clear_screen();
         }
         if(Pause==7)
@@ -564,7 +573,7 @@ void new_game() {
             precaution();
             Pause=9;
             file_save();
-            enter_to_continue();
+            if(continue_or_back()=='R') return 'B';
             clear_screen();
         }
 
@@ -580,7 +589,7 @@ void new_game() {
             }
             Pause=10;
             file_save();
-            enter_to_continue();
+            if(continue_or_back()=='R') return 'B';
             clear_screen();
         }
         if (Pause==10)
@@ -601,6 +610,7 @@ void new_game() {
         
         break;
     }
+    return 'C'; // hudai kono kam nai..
 }
 //______________________________________fallen statment______________________
 void fallen_statement()
@@ -3374,4 +3384,28 @@ void flush_input() {
 void enter_to_continue() {
     printf("\nPress Enter to continue...");
     getchar();
+}
+char continue_or_back()
+{
+    char hold;
+    printf("\n___________________________________________");
+    printf("\n->Enter \"Back\" to Redirect to menu..\n");
+    printf("->Enter to continue....     :");
+    while(1){
+    hold=getchar();
+    if(hold=='B'|| hold=='b'||hold=='\n')
+    {
+        if(hold=='B'|| hold=='b')
+        {
+            flush_input();
+            return 'R';
+        }
+        return 'n';         //hudai kono kam nai
+    }
+    else
+    {
+        flush_input();
+        printf("invalid input, \n Enter corectly :");
+    }
+}
 }
