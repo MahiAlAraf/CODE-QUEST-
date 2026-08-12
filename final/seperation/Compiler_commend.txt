@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Compiler	                                   Command
 
 GCC                --               	gcc CODE_QUEST.c utilities.c -o CODE_QUEST
@@ -5,4 +6,13 @@ Clang              --           	clang CODE_QUEST.c utilities.c -o CODE_QUEST
 MSVC               --               	cl CODE_QUEST.c utilities.c
 
 
+=======
+Compiler	                                   Command
+
+GCC                --               	gcc CODE_QUEST.c utilities.c -o CODE_QUEST
+Clang              --           	clang CODE_QUEST.c utilities.c -o CODE_QUEST
+MSVC               --               	cl CODE_QUEST.c utilities.c
+
+
+>>>>>>> a54de3047b622098f10840904c39e7c2b095d71e
 after command run the game :           ./CODE_QUEST
