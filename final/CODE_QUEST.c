@@ -13,89 +13,89 @@ int Pause;
 int Vibranium_sheld=0;
 int dubble_XP=0;
 //_______________________function prototypes_____________________
-void clear_screen();
-void enter_to_continue();
-char continue_or_back();
-void current_status();
-void level_status();
-void flush_input();
-void HP_Bar();
-int answer_input_loop();
-char Yes_No_loop();
-int correct_answer(char question[], char option[4][60], int correctAns,
+void clear_screen();  // line 198
+void enter_to_continue();  // line 3384
+char continue_or_back();  // line 3388
+void current_status();  // line 639
+void level_status();  // line 645
+void flush_input();  // line 3378
+void HP_Bar();  // line 624
+int answer_input_loop();  // line 661
+char Yes_No_loop();  // line 674
+int correct_answer(char question[], char option[4][60], int correctAns,  // line 693
                     int HP_Minus_if_wrong, int Reward_Coin, int reward_XP,
                     char explanation[4][150]);
-void show_menu();
-int profile_open();
-void profile_save();
-void profile_reset();
-void MarketPlace();
-void MarketPlace_items();
-void file_reset();
-int file_open();
-void file_save();
-void Market_open();
-void Market_save();
-void Market_reset();
-void introduction();
-char new_game();
-void fallen_statement();
-int variable_village();
-int loop_forest();
-void After_forest_EQuest();
-int array_cave();
-void After_cave_shop();
-int Function_falls();
-int Pointer_peak();
-void Precaution_EQuest();
-void precaution();
-int final_stage();
-int NUL_POINTER();
-void Congratulations();
+void show_menu();  // line 96
+int profile_open();  // line 223
+void profile_save();  // line 212
+void profile_reset();  // line 206
+void MarketPlace();  // line 285
+void MarketPlace_items();  // line 369
+void file_reset();  // line 234
+int file_open();  // line 241
+void file_save();  // line 252
+void Market_open();  // line 266
+void Market_save();  // line 278
+void Market_reset();  // line 259
+void introduction();  // line 382
+char new_game();  // line 396
+void fallen_statement();  // line 616
+int variable_village();  // line 760
+int loop_forest();  // line 831
+void After_forest_EQuest();  // line 915
+int array_cave();  // line 957
+void After_cave_shop();  // line 1033
+int Function_falls();  // line 1089
+int Pointer_peak();  // line 1200
+void Precaution_EQuest();  // line 1315
+void precaution();  // line 1359
+int final_stage();  // line 1394
+int NUL_POINTER();  // line 1491
+void Congratulations();  // line 1593
 
-char lesson_navigation(int section, int total_sections);          //need
-int menu_input(int min, int max);                                 //need
-void traning_answer(char question[], char option[4][60], int correctAns, char explanation[4][150]);       //need
+char lesson_navigation(int section, int total_sections);          //need  // line 1649
+int menu_input(int min, int max);                                 //need  // line 1685
+void traning_answer(char question[], char option[4][60], int correctAns, char explanation[4][150]);       //need  // line 1708
 
-void training();
-void VariableDatatypeTraining();
-void V_D_lesson();
-void V_D_quiz();
+void training();  // line 1748
+void VariableDatatypeTraining();  // line 1809
+void V_D_lesson();  // line 1855
+void V_D_quiz();  // line 1953
 
-void ConditionTraining();
-void Condition_lesson();
-void Condition_quiz();
+void ConditionTraining();  // line 2011
+void Condition_lesson();  // line 2058
+void Condition_quiz();  // line 2196
 
-void LoopTraining();
-void Loop_lesson();
-void Loop_quiz();
+void LoopTraining();  // line 2256
+void Loop_lesson();  // line 2303
+void Loop_quiz();  // line 2466
 
-void ArrayTraining();
-void Array_lesson();
-void Array_quiz();
+void ArrayTraining();  // line 2525
+void Array_lesson();  // line 2572
+void Array_quiz();  // line 2673
 
-void FunctionTraining();
-void Function_lesson();
-void Function_quiz();
+void FunctionTraining();  // line 2730
+void Function_lesson();  // line 2776
+void Function_quiz();  // line 2919
 
-void PointerTraining();
-void Pointer_lesson();
-void Pointer_quiz();
+void PointerTraining();  // line 2979
+void Pointer_lesson();  // line 3025
+void Pointer_quiz();  // line 3125
 
-void StringTraining();
-void String_lesson();
-void String_quiz();
+void StringTraining();  // line 3184
+void String_lesson();  // line 3231
+void String_quiz();  // line 3323
 
 
 int main() {
-    show_menu();
+    show_menu();  // line 96
     return 0;
 }
 
 //__________________MAIN MENU_____________
 void show_menu() {
     int choice;
-    file_open();
+    file_open();  // line 241
     printf(
 "   ______   ____  \n"
 "  / ____/  / __ \\ \n"
@@ -113,7 +113,7 @@ void show_menu() {
    while(1)
    {
     scanf("%d",&choice);
-    flush_input();
+    flush_input();  // line 3378
     if(choice>=1 && choice<=6)
     {
         break;
@@ -123,72 +123,72 @@ void show_menu() {
    }
 
     if (choice == 1) {
-        file_reset();
-        profile_reset();
-        Market_reset();
-        clear_screen();
-        introduction();
-        enter_to_continue();
-        clear_screen();
-        if(new_game()=='B') 
+        file_reset();  // line 234
+        profile_reset();  // line 206
+        Market_reset();  // line 259
+        clear_screen();  // line 198
+        introduction();  // line 382
+        enter_to_continue();  // line 3384
+        clear_screen();  // line 198
+        if(new_game()=='B')   // line 396
         {
-            clear_screen();
-            show_menu();
+            clear_screen();  // line 198
+            show_menu();  // line 96
         }
     } else if (choice == 2) {
-        clear_screen();
-        if (file_open() == 0) {
+        clear_screen();  // line 198
+        if (file_open() == 0) {  // line 241
             printf("\nNo saved game found. Starting a new game...\n");
-            file_reset();
-            introduction();
-            enter_to_continue();
+            file_reset();  // line 234
+            introduction();  // line 382
+            enter_to_continue();  // line 3384
         } else {
-            profile_open();
+            profile_open();  // line 223
         }
-        clear_screen();
-        if(new_game()=='B') 
+        clear_screen();  // line 198
+        if(new_game()=='B')   // line 396
         {
-            clear_screen();
-            show_menu();
+            clear_screen();  // line 198
+            show_menu();  // line 96
         }
     } else if (choice == 3) {
         if(Pause==1 || XP <=25)
         {
             printf("Marketplace is locked. You need to reach at least level \"Noob\" to access it.\n");
-            enter_to_continue();
-            clear_screen();
-            show_menu();
+            enter_to_continue();  // line 3384
+            clear_screen();  // line 198
+            show_menu();  // line 96
         }
         else
         {
-            MarketPlace();
-            enter_to_continue();
-            clear_screen();
-            show_menu();
+            MarketPlace();  // line 285
+            enter_to_continue();  // line 3384
+            clear_screen();  // line 198
+            show_menu();  // line 96
         }
     } else if (choice == 4) {
-        if(profile_open()==0)
+        if(profile_open()==0)  // line 223
         {
             printf("\nNo profile found.\n\n\n");
         }else{
             printf("\nProfile loaded successfully.\n");
-            profile_open();
-            file_open();
+            profile_open();  // line 223
+            file_open();  // line 241
             printf("\nProfile Name: %s\n", Name);
             printf("Current HP    :     %d\n", HP);
             printf("Current XP    :     %d\n", XP);
-            level_status();
+            level_status();  // line 645
             printf("Current Coins :     %d\n\n\n", Coin);
         }
-        enter_to_continue();
-        clear_screen();
-        show_menu();
+        enter_to_continue();  // line 3384
+        clear_screen();  // line 198
+        show_menu();  // line 96
     }
     else if(choice ==5)
     {
-        training();
-        clear_screen();
-        show_menu();
+        training();  // line 1748
+        clear_screen();  // line 198
+        show_menu();  // line 96
     }
     else{
         printf("\n   Goodbye, Apprentice.\n");
@@ -213,7 +213,7 @@ void profile_save()
 {
    printf("Enter your name: ");
     scanf("%s",Name);
-    flush_input();
+    flush_input();  // line 3378
     printf("\nWelcome %s, your journey begins!\n", Name);
     FILE *save;
     save=fopen("profile.txt","w");
@@ -269,7 +269,7 @@ void Market_open()
     open=fopen("market.txt","r");
     if(open == NULL)
     {
-        Market_reset();
+        Market_reset();  // line 259
         open=fopen("market.txt","r");
     }
     fscanf(open,"%d %d",&Vibranium_sheld,&dubble_XP);
@@ -284,17 +284,17 @@ void Market_save()
 }
 void MarketPlace()
 {
-    Market_open();
+    Market_open();  // line 266
     printf("\n====================MARKETPLACE====================\n");
     printf("Welcome to the Marketplace, %s!\n", Name);
     printf("Here you can buy special items to aid your journey.\n");
     printf("Your current coins: %d\n", Coin);
     while(1)
   {
-        MarketPlace_items();
-        file_open();
+        MarketPlace_items();  // line 369
+        file_open();  // line 241
         int choice;
-        choice = answer_input_loop();
+        choice = answer_input_loop();  // line 661
 
         if (choice == 1) {
             if (Coin >= 200) {
@@ -331,7 +331,7 @@ void MarketPlace()
                 while(1)
                {
                     scanf("%d", &drops);
-                    flush_input();
+                    flush_input();  // line 3378
                     if(drops >= 1 && drops <= 25)
                     {
                         break;
@@ -363,8 +363,8 @@ void MarketPlace()
         }
 
     }
-    Market_save();
-    file_save();
+    Market_save();  // line 278
+    file_save();  // line 252
 }
 void MarketPlace_items()
 {
@@ -388,47 +388,47 @@ void introduction()
     printf("      Fix 4 lands. Face the Null Pointer. Save the kingdom.\n");
     printf("----------------------------------------------------------------\n\n");
 
-    profile_save();
-    profile_open();
+    profile_save();  // line 212
+    profile_open();  // line 223
 }
 
 //___________________________________________________________NEW GAME____________________________________________________
 char new_game() {
 
     while (1) {
-      file_open();
+      file_open();  // line 241
       if(Pause==1)
         {
-            HP = variable_village();
+            HP = variable_village();  // line 760
             if (HP <= 0) 
             {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             Pause=2;
-            file_save();
-            if(continue_or_back()=='R') return 'B';
-            clear_screen();
+            file_save();  // line 252
+            if(continue_or_back()=='R') return 'B';  // line 3388
+            clear_screen();  // line 198
         }
        if (Pause==2)
         {
-            HP = loop_forest();
+            HP = loop_forest();  // line 831
             if (HP <= 0)
             {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             Pause=3;
-            file_save();
-            current_status();
-            if(continue_or_back()=='R') return'B';
-            clear_screen();
+            file_save();  // line 252
+            current_status();  // line 639
+            if(continue_or_back()=='R') return'B';  // line 3388
+            clear_screen();  // line 198
         }
         if(Pause==3)
         {
@@ -441,82 +441,82 @@ char new_game() {
             printf("        Wizard of Iteration: \"Go to Array Cave, apprentice %s.       \n", Name);
             printf(  "Whatever broke the loops here..it's reaching further than we thought.\"\n");
             printf("=========================================================================\n");
-            enter_to_continue();
-            After_forest_EQuest();
-            file_save();
-            current_status();
-            if(continue_or_back()=='R') return'B';
-            clear_screen();
+            enter_to_continue();  // line 3384
+            After_forest_EQuest();  // line 915
+            file_save();  // line 252
+            current_status();  // line 639
+            if(continue_or_back()=='R') return'B';  // line 3388
+            clear_screen();  // line 198
             Pause=4;
         }
         if(Pause==4)
         {
-            HP = array_cave();
+            HP = array_cave();  // line 957
             if (HP <= 0) {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             Pause=5;
-            file_save();
-            if(continue_or_back()=='R') return'B';
-            clear_screen();
+            file_save();  // line 252
+            if(continue_or_back()=='R') return'B';  // line 3388
+            clear_screen();  // line 198
         }
         if(Pause==5)
         {
             printf("-----------------------------------------------------------------------------------------\n");
             printf("%s : OHH, at last back in one piece. I guess there should be Function Falls ahead.\n", Name);
-            current_status();
+            current_status();  // line 639
             printf("Need to do something about it\n");
             printf("Want to search for any store? (y/n): ");
-            char store_choice = Yes_No_loop();
+            char store_choice = Yes_No_loop();  // line 674
             if (store_choice == 'y' || store_choice == 'Y')
             {
-                After_cave_shop();
-                file_save();
+                After_cave_shop();  // line 1033
+                file_save();  // line 252
             } 
             else 
             {
                 printf("OK, to the next phase then...\n");
             }
             Pause=6;
-            file_save();
-            if(continue_or_back()=='R') return'B';
-            clear_screen();
+            file_save();  // line 252
+            if(continue_or_back()=='R') return'B';  // line 3388
+            clear_screen();  // line 198
         }
         if(Pause==6)
         {
-            HP = Function_falls();
+            HP = Function_falls();  // line 1089
             if (HP <= 0) {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             Pause=7;
-            file_save();
-            current_status();
-            if(continue_or_back()=='R') return'B';
-            clear_screen();
+            file_save();  // line 252
+            current_status();  // line 639
+            if(continue_or_back()=='R') return'B';  // line 3388
+            clear_screen();  // line 198
         }
         if(Pause==7)
         {
-            HP = Pointer_peak();
+            HP = Pointer_peak();  // line 1200
             if (HP <= 0) {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             Pause=8;
-            file_save();
-            current_status();
-            enter_to_continue();
-            clear_screen();
+            file_save();  // line 252
+            current_status();  // line 639
+            enter_to_continue();  // line 3384
+            clear_screen();  // line 198
         }
         if(Pause==8)
         {
@@ -536,76 +536,76 @@ char new_game() {
             printf("|   The road ahead fades into fog...                        |\n");
             printf("|                                                            |\n");
             printf("+----------------------------------------------------------+\n");
-            enter_to_continue();
-            clear_screen();
-            current_status();
+            enter_to_continue();  // line 3384
+            clear_screen();  // line 198
+            current_status();  // line 639
             printf("\n\n%s : I think I should take some precaution steps before facing the NULL POINTER\n", Name);
             printf("%s : Let's head back to the store and see what I can grab.\n\n", Name);
             printf("\n\n----------On the way to the store, %s found a man seeking his help!", Name);
             printf("\nWant to see? Or ignore him?\ny/n: ");
 
-            char decision = Yes_No_loop();
+            char decision = Yes_No_loop();  // line 674
             if (decision == 'y' || decision == 'Y')
             {
-                clear_screen();
-                Precaution_EQuest();
-                file_save();
+                clear_screen();  // line 198
+                Precaution_EQuest();  // line 1315
+                file_save();  // line 252
             }
             else
             {
-                clear_screen();
+                clear_screen();  // line 198
                 printf("Are you sure you want to avoid this? This might be a great chance to win some coins...\n");
                 printf("y/n: ");
-                char decision2 = Yes_No_loop();
+                char decision2 = Yes_No_loop();  // line 674
                 if (decision2 == 'y' || decision2 == 'Y')
                 {
                     printf("%s : Sorry sir, but I am in a hurry, I have not much time.\n\n", Name);
                 }
                 else
                 {
-                    clear_screen();
-                    Precaution_EQuest();
-                    file_save();
+                    clear_screen();  // line 198
+                    Precaution_EQuest();  // line 1315
+                    file_save();  // line 252
                 }
             }
-            enter_to_continue();
-            clear_screen();
-            precaution();
+            enter_to_continue();  // line 3384
+            clear_screen();  // line 198
+            precaution();  // line 1359
             Pause=9;
-            file_save();
-            if(continue_or_back()=='R') return 'B';
-            clear_screen();
+            file_save();  // line 252
+            if(continue_or_back()=='R') return 'B';  // line 3388
+            clear_screen();  // line 198
         }
 
         if(Pause==9)
         {
-            HP = final_stage();
+            HP = final_stage();  // line 1394
             if (HP <= 0) {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             Pause=10;
-            file_save();
-            if(continue_or_back()=='R') return 'B';
-            clear_screen();
+            file_save();  // line 252
+            if(continue_or_back()=='R') return 'B';  // line 3388
+            clear_screen();  // line 198
         }
         if (Pause==10)
         {
-            HP=NUL_POINTER();
+            HP=NUL_POINTER();  // line 1491
             if(HP<=0)
             {
-                fallen_statement();
-                enter_to_continue();
-                clear_screen();
-                file_reset();
+                fallen_statement();  // line 616
+                enter_to_continue();  // line 3384
+                clear_screen();  // line 198
+                file_reset();  // line 234
                 continue;
             }
             remove("save.txt");
-            profile_reset();
-            Market_reset();
+            profile_reset();  // line 206
+            Market_reset();  // line 259
         }
         
         break;
@@ -639,8 +639,8 @@ void HP_Bar() {
 void current_status() {
     printf("\n\n<------------------your current status---------------->\n");
     printf("       %d HP  ;   %d   XP    ;    %d   Coins\n", HP, XP, Coin);
-    HP_Bar();
-    level_status();
+    HP_Bar();  // line 624
+    level_status();  // line 645
 }
 void level_status()
 {
@@ -662,7 +662,7 @@ int answer_input_loop() {
     int answer;
     while (1) {
         scanf("%d", &answer);
-        flush_input();
+        flush_input();  // line 3378
         if (answer == 1 || answer == 2 || answer == 3 || answer == 4) {
             return answer;
         } else {
@@ -677,7 +677,7 @@ char Yes_No_loop()
     while(1)
     {
         scanf(" %c",&answer);
-        flush_input();
+        flush_input();  // line 3378
         if(answer=='y'||answer=='Y'||answer=='n'||answer=='N')
         {
             return answer;
@@ -694,14 +694,14 @@ int correct_answer(char question[], char option[4][60], int correctAns,
                     int HP_Minus_if_wrong, int Reward_Coin, int reward_XP,
                     char explanation[4][150]) {
     int i, answer, is_wrong;
-    Market_open();
+    Market_open();  // line 266
 
     printf("\n%s\n", question);
     for (i = 0; i < 4; i++) {
         printf("%d. %s\n", i + 1, option[i]);
     }
     printf("Enter Answer: ");
-    answer = answer_input_loop();
+    answer = answer_input_loop();  // line 661
 
     if (answer == correctAns) {
         if(dubble_XP==1)
@@ -732,26 +732,26 @@ int correct_answer(char question[], char option[4][60], int correctAns,
         if (HP < 0) {
             HP = 0;
         }
-        HP_Bar();
+        HP_Bar();  // line 624
         is_wrong = 1;
     }
-    Market_save();
+    Market_save();  // line 278
 
     printf("Want to see why?...\n");
     char yes;
     printf("\n Choose : y/n  :");
-    yes = Yes_No_loop();
+    yes = Yes_No_loop();  // line 674
     if (yes == 'y' || yes=='Y') 
     {
         for (i = 0; i < 4; i++) {
             printf("%s\n", explanation[i]);
         }
-        enter_to_continue();
-        clear_screen();
+        enter_to_continue();  // line 3384
+        clear_screen();  // line 198
     }
     else
     {
-        clear_screen();
+        clear_screen();  // line 198
     }
     return is_wrong;
 }
@@ -764,9 +764,9 @@ int variable_village() {
     printf("Village houses keep changing values. Nobody trusts anything anymore.\n");
     printf("Elder Byte: \"Fix our variables, apprentice. Show them what's real.\"\n\n");
     printf("Be careful, wrong answers cost HP. Your current HP:\n");
-    HP_Bar();
-    enter_to_continue();
-    clear_screen();
+    HP_Bar();  // line 624
+    enter_to_continue();  // line 3384
+    clear_screen();  // line 198
 
     //________________question NO. 1_________________
     char Q1[] = "Which data type stores a single character like 'A'?";
@@ -777,7 +777,7 @@ int variable_village() {
         "float - stores decimal numbers like 3.14, not characters.",
         "double - stores larger, more precise decimal numbers, also not characters."
     };
-    correct_answer(Q1, Q1_option, 2, 10, 3, 2, Q1_explanation);
+    correct_answer(Q1, Q1_option, 2, 10, 3, 2, Q1_explanation);  // line 693
     if (HP <= 0) return HP;
 
 
@@ -790,7 +790,7 @@ int variable_village() {
         "age int; - wrong order; the type must always come before the name in C.",
         "var age; - var isn't a C keyword either (that's from JavaScript)."
     };
-    correct_answer(Q2, Q2_option, 1, 8, 3, 2, Q2_explanation);
+    correct_answer(Q2, Q2_option, 1, 8, 3, 2, Q2_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //________________question NO. 3_________________
@@ -802,7 +802,7 @@ int variable_village() {
         "8 - correct: 5 + 3 = 8, and x is updated to that new value. Correct answer.",
         "53 - that would only happen if you joined text/strings together, not added numbers."
     };
-    correct_answer(Q3, Q3_option, 3, 12, 4, 3, Q3_explanation);
+    correct_answer(Q3, Q3_option, 3, 12, 4, 3, Q3_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //________________question NO. 4 - Corrupted Villager (mini-boss)_________________
@@ -815,13 +815,13 @@ int variable_village() {
         "float - built specifically for decimal/floating-point numbers. Correct answer.",
         "void - means no value at all, used for functions that return nothing, not a storage type."
     };
-    correct_answer(Q4, Q4_option, 3, 20, 5, 4, Q4_explanation);
+    correct_answer(Q4, Q4_option, 3, 20, 5, 4, Q4_explanation);  // line 693
     if (HP <= 0) return HP;
 
     printf("\nThe Corrupted Villager fades away. The village calms down.\n");
     printf("A fragment of the Great Algorithm is restored!\n");
     printf("Elder Byte: \"Well done. The forest ahead awaits your help.\"\n");
-    current_status();
+    current_status();  // line 639
     printf("\n");
 
     return HP;
@@ -852,7 +852,7 @@ int loop_forest() {
         "Option 3: wrong - mixes while with for syntax.",
         "Option 4: wrong - missing the parentheses ( ) around the loop header."
     };
-    correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation);
+    correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //Q2 - trace the output
@@ -869,7 +869,7 @@ int loop_forest() {
         "Option 3: wrong - that would need the condition i <= 6.",
         "Option 4: wrong - that's a countdown, this loop counts up."
     };
-    correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation);
+    correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //Q3 - spot the infinite loop
@@ -885,7 +885,7 @@ int loop_forest() {
         "Snippet 3: infinite - i is never incremented anywhere inside the loop, so i < 10 stays true forever.",
         "Snippet 4: ends normally - counts down from 10 to 1, correctly decrementing each pass."
     };
-    correct_answer(Q3, Q3_option, 3, 10, 6, 4, Q3_explanation);
+    correct_answer(Q3, Q3_option, 3, 10, 6, 4, Q3_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //Q4 - mini-boss: Infinite Loop Beast (off-by-one bug)
@@ -903,7 +903,7 @@ int loop_forest() {
         "Option 3: wrong - starting i at 0 is intentional, since the goal is to include 0 in the sum.",
         "Option 4: wrong - that would overwrite total every time instead of accumulating it."
     };
-    correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation);
+    correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation);  // line 693
     if (HP <= 0) return HP;
 
     printf("\nCongratulations %s, you have found a way out of the Loop Forest!\n", Name);
@@ -915,10 +915,10 @@ int loop_forest() {
 void After_forest_EQuest() {
     printf("\n\nOhh wait... another traveler is waving for help.\n");
     printf("Want to help her out? (y/n): ");
-    char choice = Yes_No_loop();
+    char choice = Yes_No_loop();  // line 674
 
     if (choice == 'y'|| choice=='Y') {
-        clear_screen();
+        clear_screen();  // line 198
         printf("\n=============================SIDE QUEST===================================\n");
         printf("             Note: Side quests may give rewards but never cost HP.\n\n");
         printf("A traveler waves at you from a loop: \"Help me - I don't know if I'll ever get out!\"\n");
@@ -936,7 +936,7 @@ void After_forest_EQuest() {
             "Option 3: wrong - the starting value being even or odd doesn't matter here; it counts down to 0 either way.",
             "Option 4: wrong - while loops absolutely can and do stop, as long as the condition eventually becomes false."
         };
-        int wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation);
+        int wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation);  // line 693
         if (wrong == 0) {
             printf("\nThe Traveler: \"Thank you sir, it was a great help for me.\n");
             printf("I have nothing much to give you but I can surely give you some coins.\"\n");
@@ -962,7 +962,7 @@ int array_cave() {
     printf(" ||       This is how the old builders stored things in order: an array.          ||\n");
     printf(" ===================================================================================\n\n");
     printf("The Wizard: \"Careful, apprentice. Step wrong here, and you don't just fail - you corrupt what's next to you.\"\n");
-    enter_to_continue();
+    enter_to_continue();  // line 3384
 
     //_____________________________________question 1____________________________________
     printf("\nint arr[5] = {10, 20, 30, 40, 50};\n");
@@ -980,7 +980,7 @@ int array_cave() {
         "Correct! Valid indices are 0 to 4. arr[5] reaches past the array into memory it doesn't own.",
         "Wrong - this compiles fine; the danger is at runtime, not compile time."
     };
-    correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation);
+    correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //__________________________________Question 2___________________________________________________
@@ -1003,7 +1003,7 @@ int array_cave() {
         "Wrong - sum = 0; is a proper initialization.",
         "Wrong - arrays are meant to be used inside loops; that's the whole point of indexing."
     };
-    correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation);
+    correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //__________________________________________question 3________________________________________________________
@@ -1023,7 +1023,7 @@ int array_cave() {
         "Correct! p points to arr[0]; *(p+2) is arr[2] = 15. Arrays and pointer arithmetic are the same thing under the hood.",
         "Wrong - this is completely valid C syntax."
     };
-    correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation);
+    correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation);  // line 693
     if (HP <= 0) return HP;
 
     printf("\nWell done %s! Cave stabilizes. Fragment restored.\n", Name);
@@ -1032,7 +1032,7 @@ int array_cave() {
 //___________________________________________________Shop After array cave ________________________________________
 void After_cave_shop()
 {
-    clear_screen();
+    clear_screen();  // line 198
     printf("\n=================================================================================================\n");
     printf("                          There is a small wooden shop ahead \n");
     printf("                                Traveler %s goes inside\n", Name);
@@ -1048,7 +1048,7 @@ void After_cave_shop()
     printf("Enter Choose: ");
     while(1)
     {
-        Choose = answer_input_loop();
+        Choose = answer_input_loop();  // line 661
         if (Choose == 1) {
             if (Coin >= 30) {
                 printf("Elixir obtained\nHP restored by 50\n");
@@ -1057,7 +1057,7 @@ void After_cave_shop()
                     HP = Max_HP;
                 }
                 Coin = Coin - 30;
-                current_status();
+                current_status();  // line 639
                 break;
             } else {
                 printf(".... Insufficient Coins \nYou have %d coins.\nPick something else...\n", Coin);
@@ -1067,7 +1067,7 @@ void After_cave_shop()
                 printf("Iron Shield obtained\nHP penalty canceled by 50%% for the next wrong answer.\n");
                 Coin = Coin - 175;
                 Iron_shield = 1;
-                current_status();
+                current_status();  // line 639
                 break;
             } else {
                 printf(".... Insufficient Coins \nYou have %d coins.\nPick something else...\n", Coin);
@@ -1092,15 +1092,15 @@ int Function_falls() {
     printf("|                     that's what the old engineers called functions.                               |\n");
     printf("|  Now the wheel is jammed. Something's torn its scrolls apart and scattered them across the falls. |\n");
     printf("-----------------------------------------------------------------------------------------------------\n");
-    enter_to_continue();
-    clear_screen();
+    enter_to_continue();  // line 3384
+    clear_screen();  // line 198
     printf("\nElder:\n");
     printf(" ______________________________________________________________________________________ \n");
     printf("|                           Careful this time, traveler.                               |\n");
     printf("|                   One wrong scroll and the whole wheel jams                          |\n");
     printf("|This region will cost you more if you fail - but it'll reward you more if you succeed |\n");
     printf("|______________________________________________________________________________________|\n");
-    enter_to_continue();
+    enter_to_continue();  // line 3384
 
     //________________________________________________________________Question NO 1_______________________________________________________________
     printf("\nvoid changeIt(int x) {\n");
@@ -1125,7 +1125,7 @@ int Function_falls() {
         "Wrong - num is a properly initialized local variable, not garbage.",
         "Wrong - this compiles and runs fine."
     };
-    correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation);
+    correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //_____________________________________________Question 2___________________________________
@@ -1147,7 +1147,7 @@ int Function_falls() {
         "Correct! It's a sum: 4+3+2+1+0 = 10. Recursion with a proper base case (n==0) always terminates.",
         "Wrong - n == 0 is a valid base case, so this recursion does terminate."
     };
-    correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation);
+    correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //________________________________________Question 3_______________________________________________
@@ -1174,7 +1174,7 @@ int Function_falls() {
         "Wrong - close, but check the order of digits printed.",
         "Correct! Local count inside reset() shadows the global one. Prints 0, then the global 10 -> \"010\"."
     };
-    correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation);
+    correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //________________________________________Question 4______________________________________________
@@ -1191,7 +1191,7 @@ int Function_falls() {
         "Wrong - a function fully defined before main() acts as its own prototype; no issue.",
         "Wrong - option 2 does cause an issue."
     };
-    correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation);
+    correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation);  // line 693
     if (HP <= 0) return HP;
 
     printf("\nWell done %s! The Waterwheel turns once more.\n", Name);
@@ -1208,7 +1208,7 @@ int Pointer_peak()
     printf("         One wrong step, and you fall into empty memory\n");
     printf("====================================================================\n");
     printf("He hands you a torch. \"Light your way. Trust the address, not the shadow.\"\n\n");
-    enter_to_continue();
+    enter_to_continue();  // line 3384
 
     printf("Note: Pointer Peak does not forgive mistakes. -15HP for each wrong answer\n");
 
@@ -1229,7 +1229,7 @@ int Pointer_peak()
         "Wrong - *p is a value, not an address.",
         "Wrong - this is valid, common pointer code."
     };
-    correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation);
+    correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //__________________________________________Question 2____________________________________
@@ -1253,7 +1253,7 @@ int Pointer_peak()
         "Wrong - 4 is the value of a, not b, and a is untouched here.",
         "Wrong - 8 would be 4 doubled, but the pointer never points to a in this run."
     };
-    correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation);
+    correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //____________________________________________Question 3________________________________________
@@ -1278,7 +1278,7 @@ int Pointer_peak()
         "Wrong - 15 is not the sum of these four numbers.",
         "Correct - p starts at arr[0] and moves forward each loop (p++). It adds 1+2+3+4 = 10."
     };
-    correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation);
+    correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation);  // line 693
     if (HP <= 0) return HP;
 
     //__________________________________Question 4___________________________________________
@@ -1306,7 +1306,7 @@ int Pointer_peak()
         "Correct - the loop walks through the array using the pointer. Only 4 and 8 divide evenly by 4 (remainder 0), so count becomes 2.",
         "Wrong - some numbers do divide by 4 (4 and 8), so count is not 0."
     };
-    correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation);
+    correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation);  // line 693
     if (HP <= 0) return HP;
 
     return HP;
@@ -1346,14 +1346,14 @@ void Precaution_EQuest()
         "Wrong - 100 isn't the sum of these five numbers even under normal conditions.",
         "Wrong - this compiles fine; the problem only shows up at runtime."
     };
-    correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation);
+    correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation);  // line 693
     printf("\n%s : Sir, your code is corrupted. It reads out of bounds - \"ptr++\" is causing the problem.\n", Name);
     printf("Remove it and the code should output 150.\n");
     printf("---------------------------------------------------------\n");
     printf("Traveler : Thank you, here's a little something for your trouble.\n");
     printf("---------------------------------------------------------\n");
-    current_status();
-    file_save();
+    current_status();  // line 639
+    file_save();  // line 252
 }
 //___________________________________precoursion___________________________________________
 void precaution()
@@ -1371,7 +1371,7 @@ void precaution()
     printf("Enter choice: ");
     while(1)
     {
-        choice = answer_input_loop();
+        choice = answer_input_loop();  // line 661
         if (choice == 1) {
             if (Coin >= 80) {
                 printf("You have bought the Iron Shield.\n");
@@ -1408,7 +1408,7 @@ int final_stage()
     
     
     //____________________________________question 1_______________________________________
-    enter_to_continue();
+    enter_to_continue();  // line 3384
     printf("char city[10] = \"Code\";\n");
     printf("strcat(city, \"Quest\");\n");
     printf("printf(\"%%s\", city);\n");
@@ -1427,7 +1427,7 @@ int final_stage()
         "Wrong - tempting, but count the space: city[10] holds 9 characters + \\0, and \"CodeQuest\" is exactly 9, it fits perfectly.",
         "Wrong - strcat doesn't overwrite, it appends onto the end of the existing string."
     };
-    correct_answer(Q1,Q1_option,1,20,8,3,Q1_explanation);
+    correct_answer(Q1,Q1_option,1,20,8,3,Q1_explanation);  // line 693
     if(HP<=0)
     {
         return HP;
@@ -1477,7 +1477,7 @@ int final_stage()
         "Correct - count only increments when s1[i] hits a space character, so it totals the number of spaces.",
         "Wrong - s1 is properly read and count starts at 0, so there's no garbage here."
     };
-    correct_answer(Q2,Q2_option,3,20,5,3,Q2_explanation);
+    correct_answer(Q2,Q2_option,3,20,5,3,Q2_explanation);  // line 693
     if(HP<=0)
     {
         return HP;
@@ -1500,7 +1500,7 @@ int NUL_POINTER()
     printf("   NULL POINTER: \"I AM THE ABSENCE. I AM WHAT YOU FORGOT TO CHECK.\n");
     printf("        Solve what I have twisted, or become part of the void.\"\n");
     printf("===========================================================================\n\n");
-    enter_to_continue();
+    enter_to_continue();  // line 3384
 
     printf("#include <stdio.h>\n");
     printf("#include <string.h>\n\n");
@@ -1544,15 +1544,15 @@ int NUL_POINTER()
         if(scanf("%d", &answer) != 1) 
         {
             printf("Invalid input. Please enter an integer.\n");
-            flush_input(); 
+            flush_input();   // line 3378
             continue; 
         }
-        flush_input();
+        flush_input();  // line 3378
         if (answer == 20)
         {
-            clear_screen();
-            Congratulations();
-            file_reset();
+            clear_screen();  // line 198
+            Congratulations();  // line 1593
+            file_reset();  // line 234
             solved = 1;
             break;
         }
@@ -1573,7 +1573,7 @@ int NUL_POINTER()
             {
                 HP = 0;
             }
-            current_status();
+            current_status();  // line 639
             if (HP <= 0)
             {
                 break;
@@ -1673,11 +1673,11 @@ char lesson_navigation(int section, int total_sections)
     }
     if(input == '1' && section > 1) 
     {
-        flush_input(); 
+        flush_input();   // line 3378
         return 'P'; 
     }
 
-    flush_input(); 
+    flush_input();   // line 3378
     printf("Invalid input.\n");
     return 'I'; 
 }
@@ -1690,7 +1690,7 @@ int menu_input(int min, int max)
     {
         if(scanf("%d", &choice) == 1)  
         {
-            flush_input();  
+            flush_input();    // line 3378
 
             if(choice >= min && choice <= max){  
                 return choice;  // valid choice entered, exit the input loop
@@ -1698,7 +1698,7 @@ int menu_input(int min, int max)
         }
         else
         {
-            flush_input();  
+            flush_input();    // line 3378
         }
 
         printf("Invalid input.\n");
@@ -1718,7 +1718,7 @@ void traning_answer(char question[], char option[4][60], int correctAns,char exp
     }
 
     printf("Enter Answer: ");
-    answer = answer_input_loop();  
+    answer = answer_input_loop();    // line 661
 
     if(answer == correctAns)  
     {
@@ -1740,7 +1740,7 @@ void traning_answer(char question[], char option[4][60], int correctAns,char exp
         printf("Explanation: %s\n",
                explanation[correctAns - 1]);
 
-        enter_to_continue();
+        enter_to_continue();  // line 3384
 
         return;
     }
@@ -1751,7 +1751,7 @@ void training()
 
     while (1)
     {
-        clear_screen();  
+        clear_screen();    // line 198
         printf("\n============================================================\n");
         printf("                 C PROGRAMMING TRAINING\n");
         printf("============================================================\n\n");
@@ -1766,36 +1766,36 @@ void training()
         printf("0. Return to Main Menu\n\n");
 
         printf("Enter your choice: ");
-        choice = menu_input(0, 7);  
+        choice = menu_input(0, 7);    // line 1685
 
         switch (choice)
         {
             case 1:
-                VariableDatatypeTraining(); 
+                VariableDatatypeTraining();   // line 1809
                 break;
 
             case 2:
-                ConditionTraining(); 
+                ConditionTraining();   // line 2011
                 break;
 
             case 3:
-                LoopTraining();  
+                LoopTraining();    // line 2256
                 break;
 
             case 4:
-                ArrayTraining();  
+                ArrayTraining();    // line 2525
                 break;
 
             case 5:
-                FunctionTraining();  
+                FunctionTraining();    // line 2730
                 break;
 
             case 6:
-                PointerTraining(); 
+                PointerTraining();   // line 2979
                 break;
 
             case 7:
-                StringTraining(); 
+                StringTraining();   // line 3184
                 break;
 
             case 0:
@@ -1812,7 +1812,7 @@ void VariableDatatypeTraining()
 
     while (1)
     {
-        clear_screen();  
+        clear_screen();    // line 198
 
         printf("\n============================================================\n");
         printf("             VARIABLE & DATATYPE CHAMBER\n");
@@ -1828,25 +1828,25 @@ void VariableDatatypeTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); 
+        choice = menu_input(0, 2);   // line 1685
 
         if (choice == 0)  
             return;
 
         if (choice == 1)  
         {
-            V_D_lesson();  
+            V_D_lesson();    // line 1855
             V_D_QuizUnlocked = 1; 
         }
         else if (choice == 2) 
         {
             if (V_D_QuizUnlocked==1)  
-                V_D_quiz(); 
+                V_D_quiz();   // line 1953
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue();  
+                enter_to_continue();    // line 3384
             }
         }
     }
@@ -1860,7 +1860,7 @@ void V_D_lesson()
 
     while(section >= 1 && section <= total_sections)
     {
-        clear_screen(); 
+        clear_screen();   // line 198
 
         if (section == 1)  
         {
@@ -1932,7 +1932,7 @@ void V_D_lesson()
         }
 
         printf("\n------------------------------------------------------------\n");
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
 
         if (navigation == 'N')  
             section++;
@@ -1943,7 +1943,7 @@ void V_D_lesson()
         else if (navigation == 'E')  
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
 
@@ -1952,7 +1952,7 @@ void V_D_lesson()
 
 void V_D_quiz()
 {
-    clear_screen();  
+    clear_screen();    // line 198
 
     printf("============================================================\n");
     printf("          VARIABLE & DATATYPE KNOWLEDGE BATTLE\n");
@@ -1980,7 +1980,7 @@ void V_D_quiz()
         "age was initialized before printing."
     };
 
-    traning_answer(Q1, Q1_option, 2, Q1_explanation); 
+    traning_answer(Q1, Q1_option, 2, Q1_explanation);   // line 1708
 
 
     char Q2[] =
@@ -2002,8 +2002,8 @@ void V_D_quiz()
         "double stores decimal values."
     };
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation);  
-    enter_to_continue();  
+    traning_answer(Q2, Q2_option, 3, Q2_explanation);    // line 1708
+    enter_to_continue();    // line 3384
 }
 
 int Condition_quizUnlocked = 0;
@@ -2014,7 +2014,7 @@ void ConditionTraining()
 
     while (1)
     {
-        clear_screen();  
+        clear_screen();    // line 198
 
         printf("\n============================================================\n");
         printf("                    CONDITION CITADEL\n");
@@ -2030,26 +2030,26 @@ void ConditionTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2);  
+        choice = menu_input(0, 2);    // line 1685
 
         if (choice == 0)  
             return;
 
         if (choice == 1)  
         {
-            Condition_lesson();  
+            Condition_lesson();    // line 2058
             Condition_quizUnlocked = 1;
         }
 
         else if (choice == 2) 
         {
             if (Condition_quizUnlocked==1)  
-                Condition_quiz();  
+                Condition_quiz();    // line 2196
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); 
+                enter_to_continue();   // line 3384
             }
         }
     }
@@ -2060,7 +2060,7 @@ void Condition_lesson() {
     int total_sections = 8;
     char navigation;
     while(section >= 1 && section <= total_sections) {
-        clear_screen();  
+        clear_screen();    // line 198
 
        
         if(section == 1) {  
@@ -2175,7 +2175,7 @@ void Condition_lesson() {
         // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
         if(navigation == 'N')  
         {
             section++;
@@ -2187,7 +2187,7 @@ void Condition_lesson() {
         else if(navigation == 'E')  
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
     }
@@ -2195,7 +2195,7 @@ void Condition_lesson() {
 
 void Condition_quiz()
 {
-    clear_screen();  
+    clear_screen();    // line 198
 
     printf("============================================================\n");
     printf("               CONDITION KNOWLEDGE BATTLE\n");
@@ -2228,7 +2228,7 @@ void Condition_quiz()
         "only one branch executes.",
         "YES is printed."
     };
-    traning_answer(Q1, Q1_option, 1, Q1_explanation);  
+    traning_answer(Q1, Q1_option, 1, Q1_explanation);    // line 1708
 
     char Q2[] =
         "Which operator checks whether two values are equal?";
@@ -2248,8 +2248,8 @@ void Condition_quiz()
         "!= means not equal.",
         ">= means greater than or equal."
     };
-    traning_answer(Q2, Q2_option, 2, Q2_explanation);  
-    enter_to_continue();  
+    traning_answer(Q2, Q2_option, 2, Q2_explanation);    // line 1708
+    enter_to_continue();    // line 3384
 }
 
 int Loop_quizUnlocked = 0;
@@ -2259,7 +2259,7 @@ void LoopTraining()
 
     while (1)
     {
-        clear_screen(); 
+        clear_screen();   // line 198
 
         printf("\n============================================================\n");
         printf("                    LOOP LABYRINTH\n");
@@ -2275,26 +2275,26 @@ void LoopTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2);  
+        choice = menu_input(0, 2);    // line 1685
 
         if (choice == 0) 
             return;
 
         if (choice == 1)  
         {
-            Loop_lesson();  
+            Loop_lesson();    // line 2303
             Loop_quizUnlocked = 1;
         }
 
         else if (choice == 2)  
         {
             if (Loop_quizUnlocked==1)  
-                Loop_quiz();  
+                Loop_quiz();    // line 2466
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue();  
+                enter_to_continue();    // line 3384
             }
         }
     }
@@ -2308,7 +2308,7 @@ void Loop_lesson()
 
     while(section >= 1 && section <= total_sections)
     {
-        clear_screen();  
+        clear_screen();    // line 198
         if(section == 1) 
         {
             printf("============================================================\n");
@@ -2445,7 +2445,7 @@ void Loop_lesson()
 
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
         if(navigation == 'N')  
         {
             section++;
@@ -2457,7 +2457,7 @@ void Loop_lesson()
         else if(navigation == 'E')  
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
     }
@@ -2465,7 +2465,7 @@ void Loop_lesson()
 
 void Loop_quiz()
 {
-    clear_screen();  
+    clear_screen();    // line 198
 
     printf("============================================================\n");
     printf("                    LOOP KNOWLEDGE BATTLE\n");
@@ -2495,7 +2495,7 @@ void Loop_quiz()
         "i is increasing."
     };
 
-    traning_answer(Q1, Q1_option, 1, Q1_explanation);  
+    traning_answer(Q1, Q1_option, 1, Q1_explanation);    // line 1708
 
 
     char Q2[] =
@@ -2517,8 +2517,8 @@ void Loop_quiz()
         "nested only describes loops inside loops."
     };
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation);  
-    enter_to_continue();  
+    traning_answer(Q2, Q2_option, 3, Q2_explanation);    // line 1708
+    enter_to_continue();    // line 3384
 }
 
 int Array_quizUnlocked = 0;
@@ -2528,7 +2528,7 @@ void ArrayTraining()
 
     while (1)
     {
-        clear_screen();  
+        clear_screen();    // line 198
 
         printf("\n============================================================\n");
         printf("                      ARRAY ARENA\n");
@@ -2544,26 +2544,26 @@ void ArrayTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); 
+        choice = menu_input(0, 2);   // line 1685
 
         if (choice == 0)  
             return;
 
         if (choice == 1)  
         {
-            Array_lesson();  
+            Array_lesson();    // line 2572
             Array_quizUnlocked = 1;
         }
 
         else if (choice == 2)  
         {
             if (Array_quizUnlocked==1)  
-                Array_quiz();  
+                Array_quiz();    // line 2673
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue();  
+                enter_to_continue();    // line 3384
             }
         }
     }
@@ -2577,7 +2577,7 @@ void Array_lesson()
 
     while(section >= 1 && section <= total_sections)
     {
-        clear_screen(); 
+        clear_screen();   // line 198
         if(section == 1)  // SECTION 1: Array Cave
         {
             printf("============================================================\n");
@@ -2652,7 +2652,7 @@ void Array_lesson()
         // ========================= NAVIGATION =========================
     printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
         if(navigation == 'N')  
         {
             section++;
@@ -2664,7 +2664,7 @@ void Array_lesson()
         else if(navigation == 'E')  
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
     }
@@ -2672,7 +2672,7 @@ void Array_lesson()
 
 void Array_quiz()
 {
-    clear_screen();  
+    clear_screen();    // line 198
 
     printf("============================================================\n");
     printf("                    ARRAY KNOWLEDGE BATTLE\n");
@@ -2697,7 +2697,7 @@ void Array_quiz()
         "normal C arrays start at 0."
     };
 
-    traning_answer(Q1, Q1_option, 1, Q1_explanation);  
+    traning_answer(Q1, Q1_option, 1, Q1_explanation);    // line 1708
 
 
     char Q2[] =
@@ -2721,9 +2721,9 @@ void Array_quiz()
         "printf can print an array element."
     };
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation);  
+    traning_answer(Q2, Q2_option, 3, Q2_explanation);    // line 1708
 
-    enter_to_continue();  
+    enter_to_continue();    // line 3384
 }
 
 int Function_quizUnlocked = 0;
@@ -2733,7 +2733,7 @@ void FunctionTraining()
 
     while (1)
     {
-        clear_screen();  
+        clear_screen();    // line 198
         printf("\n============================================================\n");
         printf("                   FUNCTION FORTRESS\n");
         printf("============================================================\n\n");
@@ -2748,26 +2748,26 @@ void FunctionTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); 
+        choice = menu_input(0, 2);   // line 1685
 
         if (choice == 0)  
             return;
 
         if (choice == 1)  
         {
-            Function_lesson();  
+            Function_lesson();    // line 2776
             Function_quizUnlocked = 1;
         }
 
         else if (choice == 2)  
         {
             if (Function_quizUnlocked==1)  
-                Function_quiz(); 
+                Function_quiz();   // line 2919
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); 
+                enter_to_continue();   // line 3384
             }
         }
     }
@@ -2781,7 +2781,7 @@ void Function_lesson()
 
     while(section >= 1 && section <= total_sections)
     {
-        clear_screen(); 
+        clear_screen();   // line 198
         if(section == 1) 
         {
             printf("========================================\n");
@@ -2898,7 +2898,7 @@ void Function_lesson()
         // ========================= NAVIGATION =========================
     printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
         if(navigation == 'N')  
         {
             section++;
@@ -2910,7 +2910,7 @@ void Function_lesson()
         else if(navigation == 'E')  
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
     }
@@ -2918,7 +2918,7 @@ void Function_lesson()
 
 void Function_quiz()
 {
-    clear_screen(); 
+    clear_screen();   // line 198
     printf("============================================================\n");
     printf("                 FUNCTION KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
@@ -2947,7 +2947,7 @@ void Function_quiz()
         "the values are added numerically."
     };
 
-    traning_answer(Q1, Q1_option, 3, Q1_explanation); 
+    traning_answer(Q1, Q1_option, 3, Q1_explanation);   // line 1708
 
 
     char Q2[] =
@@ -2969,8 +2969,8 @@ void Function_quiz()
         "arrays are declared separately."
     };
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation);  
-    enter_to_continue();  
+    traning_answer(Q2, Q2_option, 3, Q2_explanation);    // line 1708
+    enter_to_continue();    // line 3384
 }
 
 
@@ -2982,7 +2982,7 @@ void PointerTraining()
 
     while (1)
     {
-        clear_screen(); 
+        clear_screen();   // line 198
         printf("\n============================================================\n");
         printf("                     POINTER PEAK\n");
         printf("============================================================\n\n");
@@ -2997,26 +2997,26 @@ void PointerTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2);  
+        choice = menu_input(0, 2);    // line 1685
 
         if (choice == 0) 
             return;
 
         if (choice == 1)  
         {
-            Pointer_lesson();  
+            Pointer_lesson();    // line 3025
             Pointer_quizUnlocked = 1;
         }
 
         else if (choice == 2)  
         {
             if (Pointer_quizUnlocked==1) 
-                Pointer_quiz(); 
+                Pointer_quiz();   // line 3125
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue();  
+                enter_to_continue();    // line 3384
             }
         }
     }
@@ -3030,7 +3030,7 @@ void Pointer_lesson()
 
     while(section >= 1 && section <= total_sections)
     {
-        clear_screen();  
+        clear_screen();    // line 198
         if(section == 1)  
         {
             printf("============================================================\n");
@@ -3104,7 +3104,7 @@ void Pointer_lesson()
         // ========================= NAVIGATION =========================
     printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
         if(navigation == 'N')  
         {
             section++;
@@ -3116,7 +3116,7 @@ void Pointer_lesson()
         else if(navigation == 'E')  
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
     }
@@ -3124,7 +3124,7 @@ void Pointer_lesson()
 
 void Pointer_quiz()
 {
-    clear_screen();  
+    clear_screen();    // line 198
     printf("============================================================\n");
     printf("                  POINTER KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
@@ -3152,7 +3152,7 @@ void Pointer_quiz()
         "x is initialized."
     };
 
-    traning_answer(Q1, Q1_option, 2, Q1_explanation); 
+    traning_answer(Q1, Q1_option, 2, Q1_explanation);   // line 1708
 
     char Q2[] =
         "What is wrong with this code?\n\n"
@@ -3176,8 +3176,8 @@ void Pointer_quiz()
         "* is used for dereferencing."
     };
 
-    traning_answer(Q2, Q2_option, 2, Q2_explanation);  
-    enter_to_continue();  
+    traning_answer(Q2, Q2_option, 2, Q2_explanation);    // line 1708
+    enter_to_continue();    // line 3384
 }
 
 int String_quizUnlocked = 0;
@@ -3187,7 +3187,7 @@ void StringTraining()
 
     while (1)
     {
-        clear_screen();  
+        clear_screen();    // line 198
 
         printf("\n============================================================\n");
         printf("                    SILENT CORRIDOR\n");
@@ -3203,26 +3203,26 @@ void StringTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2);  
+        choice = menu_input(0, 2);    // line 1685
 
         if (choice == 0)  
             return;
 
         if (choice == 1)  
         {
-            String_lesson();  
+            String_lesson();    // line 3231
             String_quizUnlocked = 1;
         }
 
         else if (choice == 2)  
         {
             if (String_quizUnlocked==1)  
-                String_quiz();  
+                String_quiz();    // line 3323
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue();  
+                enter_to_continue();    // line 3384
             }
         }
     }
@@ -3236,7 +3236,7 @@ void String_lesson()
 
     while(section >= 1 && section <= total_sections)
     {
-        clear_screen();  
+        clear_screen();    // line 198
         if(section == 1)  
         {
             printf("============================================================\n");
@@ -3302,7 +3302,7 @@ void String_lesson()
            // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections);  
+        navigation = lesson_navigation(section, total_sections);    // line 1649
         if(navigation == 'N')  
         {
             section++;
@@ -3314,7 +3314,7 @@ void String_lesson()
         else if(navigation == 'E') 
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue();  
+            enter_to_continue();    // line 3384
             return;
         }
     }
@@ -3322,7 +3322,7 @@ void String_lesson()
 
 void String_quiz()
 {
-    clear_screen();  
+    clear_screen();    // line 198
     printf("============================================================\n");
     printf("                   STRING KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
@@ -3348,7 +3348,7 @@ void String_quiz()
         "name[3] is e."
     };
 
-    traning_answer(Q1, Q1_option, 2, Q1_explanation);  
+    traning_answer(Q1, Q1_option, 2, Q1_explanation);    // line 1708
     char Q2[] =
         "What is wrong with this code?\n\n"
         "char name[5] = \"Warrior\";";
@@ -3369,8 +3369,8 @@ void String_quiz()
         "strings can initialize char arrays."
     };
 
-    traning_answer(Q2, Q2_option, 2, Q2_explanation);  
-    enter_to_continue();  
+    traning_answer(Q2, Q2_option, 2, Q2_explanation);    // line 1708
+    enter_to_continue();    // line 3384
 }
 
 //__________________UTILITY_____________
@@ -3397,14 +3397,14 @@ char continue_or_back()
     {
         if(hold=='B'|| hold=='b')
         {
-            flush_input();
+            flush_input();  // line 3378
             return 'R';
         }
         return 'n';         //hudai kono kam nai
     }
     else
     {
-        flush_input();
+        flush_input();  // line 3378
         printf("invalid input, \n Enter corectly :");
     }
 }
