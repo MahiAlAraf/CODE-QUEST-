@@ -14,82 +14,82 @@ int Pause;
 int Vibranium_sheld = 0;
 int dubble_XP = 0;
 //_______________________function prototypes_____________________
-void clear_screen();                                                    // line 198
-void enter_to_continue();                                               // line 3384
-char continue_or_back();                                                // line 3388
-void current_status();                                                  // line 639
-void level_status();                                                    // line 645
-void flush_input();                                                     // line 3378
-void HP_Bar();                                                          // line 624
-int answer_input_loop();                                                // line 661
-char Yes_No_loop();                                                     // line 674
-int correct_answer(char question[], char option[4][60], int correctAns, // line 693
+void clear_screen();                                                    // line 212
+void enter_to_continue();                                               // line 5979
+char continue_or_back();                                                // line 5984
+void current_status();                                                  // line 684
+void level_status();                                                    // line 691
+void flush_input();                                                     // line 5972
+void HP_Bar();                                                          // line 664
+int answer_input_loop();                                                // line 716
+char Yes_No_loop();                                                     // line 734
+int correct_answer(char question[], char option[4][60], int correctAns, // line 753
                    int HP_Minus_if_wrong, int Reward_Coin, int reward_XP,
                    char explanation[4][150]);
-void show_menu();           // line 96
-int profile_open();         // line 223
-void profile_save();        // line 212
-void profile_reset();       // line 206
-void MarketPlace();         // line 285
-void MarketPlace_items();   // line 369
-void file_reset();          // line 234
-int file_open();            // line 241
-void file_save();           // line 252
-void Market_open();         // line 266
-void Market_save();         // line 278
-void Market_reset();        // line 259
-void introduction();        // line 382
-char new_game();            // line 396
-void fallen_statement();    // line 616
-int variable_village();     // line 760
-int loop_forest();          // line 831
-void After_forest_EQuest(); // line 915
-int array_cave();           // line 957
-void After_cave_shop();     // line 1033
-int Function_falls();       // line 1089
-int Pointer_peak();         // line 1200
-void Precaution_EQuest();   // line 1315
-void precaution();          // line 1359
-int final_stage();          // line 1394
-int NUL_POINTER();          // line 1491
-void Congratulations();     // line 1593
+void show_menu();           // line 97
+int profile_open();         // line 237
+void profile_save();        // line 226
+void profile_reset();       // line 220
+void MarketPlace();         // line 301
+void MarketPlace_items();   // line 397
+void file_reset();          // line 249
+int file_open();            // line 256
+void file_save();           // line 268
+void Market_open();         // line 282
+void Market_save();         // line 294
+void Market_reset();        // line 275
+void introduction();        // line 409
+char new_game();            // line 423
+void fallen_statement();    // line 657
+int variable_village();     // line 829
+int loop_forest();          // line 1075
+void After_forest_EQuest(); // line 1383
+int array_cave();           // line 1484
+void After_cave_shop();     // line 1745
+int Function_falls();       // line 1812
+int Pointer_peak();         // line 2176
+void Precaution_EQuest();   // line 2510
+void precaution();          // line 2624
+int final_stage();          // line 2667
+int NUL_POINTER();          // line 2890
+void Congratulations();     // line 3029
 
-char lesson_navigation(int section, int total_sections);                                            // need  // line 1649
-int menu_input(int min, int max);                                                                   // need  // line 1685
-void traning_answer(char question[], char option[4][60], int correctAns, char explanation[4][150]); // need  // line 1708
+char lesson_navigation(int section, int total_sections);                                             // line 3085
+int menu_input(int min, int max);                                                                    // line 3121
+void training_answer(char question[], char option[4][60], int correctAns, char explanation[4][150]); // line 3145
 
-void training();                 // line 1748
-void VariableDatatypeTraining(); // line 1809
-void V_D_lesson();               // line 1855
-void V_D_quiz();                 // line 1953
+void training();                 // line 3183
+void VariableDatatypeTraining(); // line 3244
+void V_D_lesson();               // line 3290
+void V_D_quiz();                 // line 3387
 
-void ConditionTraining(); // line 2011
-void Condition_lesson();  // line 2058
-void Condition_quiz();    // line 2196
+void ConditionTraining(); // line 3601
+void Condition_lesson();  // line 3648
+void Condition_quiz();    // line 3794
 
-void LoopTraining(); // line 2256
-void Loop_lesson();  // line 2303
-void Loop_quiz();    // line 2466
+void LoopTraining(); // line 4025
+void Loop_lesson();  // line 4072
+void Loop_quiz();    // line 4235
 
-void ArrayTraining(); // line 2525
-void Array_lesson();  // line 2572
-void Array_quiz();    // line 2673
+void ArrayTraining(); // line 4465
+void Array_lesson();  // line 4512
+void Array_quiz();    // line 4613
 
-void FunctionTraining(); // line 2730
-void Function_lesson();  // line 2776
-void Function_quiz();    // line 2919
+void FunctionTraining(); // line 4831
+void Function_lesson();  // line 4877
+void Function_quiz();    // line 5020
 
-void PointerTraining(); // line 2979
-void Pointer_lesson();  // line 3025
-void Pointer_quiz();    // line 3125
+void PointerTraining(); // line 5252
+void Pointer_lesson();  // line 5298
+void Pointer_quiz();    // line 5398
 
-void StringTraining(); // line 3184
-void String_lesson();  // line 3231
-void String_quiz();    // line 3323
+void StringTraining(); // line 5615
+void String_lesson();  // line 5662
+void String_quiz();    // line 5754
 
 int main()
 {
-    show_menu(); // line 96
+    show_menu(); // line 97
     return 0;
 }
 
@@ -97,7 +97,7 @@ int main()
 void show_menu()
 {
     int choice;
-    file_open(); // line 241
+    file_open(); // line 256
     printf(
         "   ______   ____  \n"
         "  / ____/  / __ \\ \n"
@@ -114,7 +114,7 @@ void show_menu()
     while (1)
     {
         scanf("%d", &choice);
-        flush_input(); // line 3378
+        flush_input(); // line 5972
         if (choice >= 1 && choice <= 6)
         {
             break;
@@ -125,38 +125,38 @@ void show_menu()
 
     if (choice == 1)
     {
-        file_reset();          // line 234
-        profile_reset();       // line 206
-        Market_reset();        // line 259
-        clear_screen();        // line 198
-        introduction();        // line 382
-        enter_to_continue();   // line 3384
-        clear_screen();        // line 198
-        if (new_game() == 'B') // line 396
+        file_reset();          // line 249
+        profile_reset();       // line 220
+        Market_reset();        // line 275
+        clear_screen();        // line 212
+        introduction();        // line 409
+        enter_to_continue();   // line 5979
+        clear_screen();        // line 212
+        if (new_game() == 'B') // line 423
         {
-            clear_screen(); // line 198
-            show_menu();    // line 96
+            clear_screen(); // line 212
+            show_menu();    // line 97
         }
     }
     else if (choice == 2)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         if (file_open() == 0)
-        { // line 241
+        { // line 256
             printf("\nNo saved game found. Starting a new game...\n");
-            file_reset();        // line 234
-            introduction();      // line 382
-            enter_to_continue(); // line 3384
+            file_reset();        // line 249
+            introduction();      // line 409
+            enter_to_continue(); // line 5979
         }
         else
         {
-            profile_open(); // line 223
+            profile_open(); // line 237
         }
-        clear_screen();        // line 198
-        if (new_game() == 'B') // line 396
+        clear_screen();        // line 212
+        if (new_game() == 'B') // line 423
         {
-            clear_screen(); // line 198
-            show_menu();    // line 96
+            clear_screen(); // line 212
+            show_menu();    // line 97
         }
     }
     else if (choice == 3)
@@ -164,44 +164,44 @@ void show_menu()
         if (Pause == 1 || XP <= 25)
         {
             printf("Marketplace is locked. You need to reach at least level \"Noob\" to access it.\n");
-            enter_to_continue(); // line 3384
-            clear_screen();      // line 198
-            show_menu();         // line 96
+            enter_to_continue(); // line 5979
+            clear_screen();      // line 212
+            show_menu();         // line 97
         }
         else
         {
-            MarketPlace();       // line 285
-            enter_to_continue(); // line 3384
-            clear_screen();      // line 198
-            show_menu();         // line 96
+            MarketPlace();       // line 301
+            enter_to_continue(); // line 5979
+            clear_screen();      // line 212
+            show_menu();         // line 97
         }
     }
     else if (choice == 4)
     {
-        if (profile_open() == 0) // line 223
+        if (profile_open() == 0) // line 237
         {
             printf("\nNo profile found.\n\n\n");
         }
         else
         {
             printf("\nProfile loaded successfully.\n");
-            profile_open(); // line 223
-            file_open();    // line 241
+            profile_open(); // line 237
+            file_open();    // line 256
             printf("\nProfile Name: %s\n", Name);
             printf("Current HP    :     %d\n", HP);
             printf("Current XP    :     %d\n", XP);
-            level_status(); // line 645
+            level_status(); // line 691
             printf("Current Coins :     %d\n\n\n", Coin);
         }
-        enter_to_continue(); // line 3384
-        clear_screen();      // line 198
-        show_menu();         // line 96
+        enter_to_continue(); // line 5979
+        clear_screen();      // line 212
+        show_menu();         // line 97
     }
     else if (choice == 5)
     {
-        training();     // line 1748
-        clear_screen(); // line 198
-        show_menu();    // line 96
+        training();     // line 3183
+        clear_screen(); // line 212
+        show_menu();    // line 97
     }
     else
     {
@@ -227,7 +227,7 @@ void profile_save()
 {
     printf("Enter your name: ");
     scanf("%s", Name);
-    flush_input(); // line 3378
+    flush_input(); // line 5972
     printf("\nWelcome %s, your journey begins!\n", Name);
     FILE *save;
     save = fopen("profile.txt", "w");
@@ -285,7 +285,7 @@ void Market_open()
     open = fopen("market.txt", "r");
     if (open == NULL)
     {
-        Market_reset(); // line 259
+        Market_reset(); // line 275
         open = fopen("market.txt", "r");
     }
     fscanf(open, "%d %d", &Vibranium_sheld, &dubble_XP);
@@ -300,17 +300,17 @@ void Market_save()
 }
 void MarketPlace()
 {
-    Market_open(); // line 266
+    Market_open(); // line 282
     printf("\n====================MARKETPLACE====================\n");
     printf("Welcome to the Marketplace, %s!\n", Name);
     printf("Here you can buy special items to aid your journey.\n");
     printf("Your current coins: %d\n", Coin);
     while (1)
     {
-        MarketPlace_items(); // line 369
-        file_open();         // line 241
+        MarketPlace_items(); // line 397
+        file_open();         // line 256
         int choice;
-        choice = answer_input_loop(); // line 661
+        choice = answer_input_loop(); // line 716
 
         if (choice == 1)
         {
@@ -356,7 +356,7 @@ void MarketPlace()
                 while (1)
                 {
                     scanf("%d", &drops);
-                    flush_input(); // line 3378
+                    flush_input(); // line 5972
                     if (drops >= 1 && drops <= 25)
                     {
                         break;
@@ -391,8 +391,8 @@ void MarketPlace()
             break;
         }
     }
-    Market_save(); // line 278
-    file_save();   // line 252
+    Market_save(); // line 294
+    file_save();   // line 268
 }
 void MarketPlace_items()
 {
@@ -415,8 +415,8 @@ void introduction()
     printf("      Fix 4 lands. Face the Null Pointer. Save the kingdom.\n");
     printf("----------------------------------------------------------------\n\n");
 
-    profile_save(); // line 212
-    profile_open(); // line 223
+    profile_save(); // line 226
+    profile_open(); // line 237
 }
 
 //___________________________________________________________NEW GAME____________________________________________________
@@ -425,41 +425,41 @@ char new_game()
 
     while (1)
     {
-        file_open(); // line 241
+        file_open(); // line 256
         if (Pause == 1)
         {
-            HP = variable_village(); // line 760
+            HP = variable_village(); // line 829
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             Pause = 2;
-            file_save(); // line 252
+            file_save(); // line 268
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
         if (Pause == 2)
         {
-            HP = loop_forest(); // line 831
+            HP = loop_forest(); // line 1075
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             Pause = 3;
-            file_save();      // line 252
-            current_status(); // line 639
+            file_save();      // line 268
+            current_status(); // line 684
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
         if (Pause == 3)
         {
@@ -472,89 +472,89 @@ char new_game()
             printf("        Wizard of Iteration: \"Go to Array Cave, apprentice %s.       \n", Name);
             printf("Whatever broke the loops here..it's reaching further than we thought.\"\n");
             printf("=========================================================================\n");
-            enter_to_continue();   // line 3384
-            After_forest_EQuest(); // line 915
-            file_save();           // line 252
-            current_status();      // line 639
+            enter_to_continue();   // line 5979
+            After_forest_EQuest(); // line 1383
+            file_save();           // line 268
+            current_status();      // line 684
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
             Pause = 4;
         }
         if (Pause == 4)
         {
-            HP = array_cave(); // line 957
+            HP = array_cave(); // line 1484
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             Pause = 5;
-            file_save(); // line 252
+            file_save(); // line 268
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
         if (Pause == 5)
         {
             printf("-----------------------------------------------------------------------------------------\n");
             printf("%s : OHH, at last back in one piece. I guess there should be Function Falls ahead.\n", Name);
-            current_status(); // line 639
+            current_status(); // line 684
             printf("Need to do something about it\n");
             printf("Want to search for any store? (y/n): ");
-            char store_choice = Yes_No_loop(); // line 674
+            char store_choice = Yes_No_loop(); // line 734
             if (store_choice == 'y' || store_choice == 'Y')
             {
-                After_cave_shop(); // line 1033
-                file_save();       // line 252
+                After_cave_shop(); // line 1745
+                file_save();       // line 268
             }
             else
             {
                 printf("OK, to the next phase then...\n");
             }
             Pause = 6;
-            file_save(); // line 252
+            file_save(); // line 268
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
         if (Pause == 6)
         {
-            HP = Function_falls(); // line 1089
+            HP = Function_falls(); // line 1812
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             Pause = 7;
-            file_save();      // line 252
-            current_status(); // line 639
+            file_save();      // line 268
+            current_status(); // line 684
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
         if (Pause == 7)
         {
-            HP = Pointer_peak(); // line 1200
+            HP = Pointer_peak(); // line 2176
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             Pause = 8;
-            file_save();         // line 252
-            current_status();    // line 639
-            enter_to_continue(); // line 3384
-            clear_screen();      // line 198
+            file_save();         // line 268
+            current_status();    // line 684
+            enter_to_continue(); // line 5979
+            clear_screen();      // line 212
         }
         if (Pause == 8)
         {
@@ -574,79 +574,79 @@ char new_game()
             printf("|   The road ahead fades into fog...                        |\n");
             printf("|                                                            |\n");
             printf("+----------------------------------------------------------+\n");
-            enter_to_continue(); // line 3384
-            clear_screen();      // line 198
-            current_status();    // line 639
+            enter_to_continue(); // line 5979
+            clear_screen();      // line 212
+            current_status();    // line 684
             printf("\n\n%s : I think I should take some precaution steps before facing the NULL POINTER\n", Name);
             printf("%s : Let's head back to the store and see what I can grab.\n\n", Name);
             printf("\n\n----------On the way to the store, %s found a man seeking his help!", Name);
             printf("\nWant to see? Or ignore him?\ny/n: ");
 
-            char decision = Yes_No_loop(); // line 674
+            char decision = Yes_No_loop(); // line 734
             if (decision == 'y' || decision == 'Y')
             {
-                clear_screen();      // line 198
-                Precaution_EQuest(); // line 1315
-                file_save();         // line 252
+                clear_screen();      // line 212
+                Precaution_EQuest(); // line 2510
+                file_save();         // line 268
             }
             else
             {
-                clear_screen(); // line 198
+                clear_screen(); // line 212
                 printf("Are you sure you want to avoid this? This might be a great chance to win some coins...\n");
                 printf("y/n: ");
-                char decision2 = Yes_No_loop(); // line 674
+                char decision2 = Yes_No_loop(); // line 734
                 if (decision2 == 'y' || decision2 == 'Y')
                 {
                     printf("%s : Sorry sir, but I am in a hurry, I have not much time.\n\n", Name);
                 }
                 else
                 {
-                    clear_screen();      // line 198
-                    Precaution_EQuest(); // line 1315
-                    file_save();         // line 252
+                    clear_screen();      // line 212
+                    Precaution_EQuest(); // line 2510
+                    file_save();         // line 268
                 }
             }
-            enter_to_continue(); // line 3384
-            clear_screen();      // line 198
-            precaution();        // line 1359
+            enter_to_continue(); // line 5979
+            clear_screen();      // line 212
+            precaution();        // line 2624
             Pause = 9;
-            file_save(); // line 252
+            file_save(); // line 268
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
 
         if (Pause == 9)
         {
-            HP = final_stage(); // line 1394
+            HP = final_stage(); // line 2667
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             Pause = 10;
-            file_save(); // line 252
+            file_save(); // line 268
             if (continue_or_back() == 'R')
-                return 'B'; // line 3388
-            clear_screen(); // line 198
+                return 'B'; // line 5984
+            clear_screen(); // line 212
         }
         if (Pause == 10)
         {
-            HP = NUL_POINTER(); // line 1491
+            HP = NUL_POINTER(); // line 2890
             if (HP <= 0)
             {
-                fallen_statement();  // line 616
-                enter_to_continue(); // line 3384
-                clear_screen();      // line 198
-                file_reset();        // line 234
+                fallen_statement();  // line 657
+                enter_to_continue(); // line 5979
+                clear_screen();      // line 212
+                file_reset();        // line 249
                 continue;
             }
             remove("save.txt");
-            profile_reset(); // line 206
-            Market_reset();  // line 259
+            profile_reset(); // line 220
+            Market_reset();  // line 275
         }
 
         break;
@@ -685,8 +685,8 @@ void current_status()
 {
     printf("\n\n<------------------your current status---------------->\n");
     printf("       %d HP  ;   %d   XP    ;    %d   Coins\n", HP, XP, Coin);
-    HP_Bar();       // line 624
-    level_status(); // line 645
+    HP_Bar();       // line 664
+    level_status(); // line 691
 }
 void level_status()
 {
@@ -719,7 +719,7 @@ int answer_input_loop()
     while (1)
     {
         scanf("%d", &answer);
-        flush_input(); // line 3378
+        flush_input(); // line 5972
         if (answer == 1 || answer == 2 || answer == 3 || answer == 4)
         {
             return answer;
@@ -737,7 +737,7 @@ char Yes_No_loop()
     while (1)
     {
         scanf(" %c", &answer);
-        flush_input(); // line 3378
+        flush_input(); // line 5972
         if (answer == 'y' || answer == 'Y' || answer == 'n' || answer == 'N')
         {
             return answer;
@@ -755,7 +755,7 @@ int correct_answer(char question[], char option[4][60], int correctAns,
                    char explanation[4][150])
 {
     int i, answer, is_wrong;
-    Market_open(); // line 266
+    Market_open(); // line 282
 
     printf("\n%s\n", question);
     for (i = 0; i < 4; i++)
@@ -763,7 +763,7 @@ int correct_answer(char question[], char option[4][60], int correctAns,
         printf("%d. %s\n", i + 1, option[i]);
     }
     printf("Enter Answer: ");
-    answer = answer_input_loop(); // line 661
+    answer = answer_input_loop(); // line 716
 
     if (answer == correctAns)
     {
@@ -800,27 +800,27 @@ int correct_answer(char question[], char option[4][60], int correctAns,
         {
             HP = 0;
         }
-        HP_Bar(); // line 624
+        HP_Bar(); // line 664
         is_wrong = 1;
     }
-    Market_save(); // line 278
+    Market_save(); // line 294
 
     printf("Want to see why?...\n");
     char yes;
     printf("\n Choose : y/n  :");
-    yes = Yes_No_loop(); // line 674
+    yes = Yes_No_loop(); // line 734
     if (yes == 'y' || yes == 'Y')
     {
         for (i = 0; i < 4; i++)
         {
             printf("%s\n", explanation[i]);
         }
-        enter_to_continue(); // line 3384
-        clear_screen();      // line 198
+        enter_to_continue(); // line 5979
+        clear_screen();      // line 212
     }
     else
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
     }
     return is_wrong;
 }
@@ -836,9 +836,9 @@ int variable_village()
     printf("Village houses keep changing values. Nobody trusts anything anymore.\n");
     printf("Elder Byte: \"Fix our variables, apprentice. Show them what's real.\"\n\n");
     printf("Be careful, wrong answers cost HP. Your current HP:\n");
-    HP_Bar();            // line 624
-    enter_to_continue(); // line 3384
-    clear_screen();      // line 198
+    HP_Bar();            // line 664
+    enter_to_continue(); // line 5979
+    clear_screen();      // line 212
 
     //________________question NO. 1_________________
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit; // uper limit =4; lower limit =1;
@@ -851,7 +851,7 @@ int variable_village()
             "char - designed specifically to hold a single character. Correct answer.",
             "float - stores decimal numbers like 3.14, not characters.",
             "double - stores larger, more precise decimal numbers, also not characters."};
-        correct_answer(Q1, Q1_option, 2, 10, 3, 2, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 10, 3, 2, Q1_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -906,7 +906,7 @@ int variable_village()
             "integer age; - integer isn't a real C keyword (some other languages use it, C doesn't).",
             "age int; - wrong order; the type must always come before the name in C.",
             "var age; - var isn't a C keyword either (that's from JavaScript)."};
-        correct_answer(Q2, Q2_option, 1, 8, 3, 2, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 1, 8, 3, 2, Q2_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -961,7 +961,7 @@ int variable_village()
             "3 - that's just the number being added, not the final result.",
             "8 - correct: 5 + 3 = 8, and x is updated to that new value. Correct answer.",
             "53 - that would only happen if you joined text/strings together, not added numbers."};
-        correct_answer(Q3, Q3_option, 3, 12, 4, 3, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 3, 12, 4, 3, Q3_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1018,7 +1018,7 @@ int variable_village()
             "char - holds a single character, not numeric values.",
             "float - built specifically for decimal/floating-point numbers. Correct answer.",
             "void - means no value at all, used for functions that return nothing, not a storage type."};
-        correct_answer(Q4, Q4_option, 3, 20, 5, 4, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 3, 20, 5, 4, Q4_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1065,7 +1065,7 @@ int variable_village()
     printf("\nThe Corrupted Villager fades away. The village calms down.\n");
     printf("A fragment of the Great Algorithm is restored!\n");
     printf("Elder Byte: \"Well done. The forest ahead awaits your help.\"\n");
-    current_status(); // line 639
+    current_status(); // line 684
     printf("\n");
 
     return HP;
@@ -1101,7 +1101,7 @@ int loop_forest()
             "Option 2: wrong - commas instead of semicolons; won't compile.",
             "Option 3: wrong - mixes while with for syntax.",
             "Option 4: wrong - missing the parentheses ( ) around the loop header."};
-        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1118,7 +1118,7 @@ int loop_forest()
             "Option 2: wrong - the condition must be wrapped in parentheses in C.",
             "Option 3: wrong - a trailing semicolon here would turn the loop body into an empty statement.",
             "Option 4: wrong - 'until' is not a C keyword."};
-        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1135,7 +1135,7 @@ int loop_forest()
             "Option 2: wrong - that runs the while loop first, backwards from do-while.",
             "Option 3: wrong - missing the closing 'while(...)' after the body block.",
             "Option 4: wrong - 'until' is not a C keyword."};
-        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1152,7 +1152,7 @@ int loop_forest()
             "Option 2: wrong - i++ would move away from 1, not toward it; this never runs.",
             "Option 3: wrong - commas instead of semicolons; won't compile.",
             "Option 4: wrong - missing the parentheses ( ) around the loop header."};
-        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 10, 5, 3, Q1_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1172,7 +1172,7 @@ int loop_forest()
             "Option 2: wrong - that would be the output if the loop started at i = 0.",
             "Option 3: wrong - that would need the condition i <= 6.",
             "Option 4: wrong - that's a countdown, this loop counts up."};
-        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1189,7 +1189,7 @@ int loop_forest()
             "Option 2: wrong - that would be the output if i started at 1.",
             "Option 3: wrong - the loop stops as soon as i is no longer less than 5.",
             "Option 4: wrong - that's a countdown, this loop counts up."};
-        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1206,7 +1206,7 @@ int loop_forest()
             "Option 2: wrong - the loop stops once i exceeds 3, so 4 is never printed.",
             "Option 3: wrong - i starts at 1, not 0.",
             "Option 4: wrong - this loop counts up, not down."};
-        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1223,7 +1223,7 @@ int loop_forest()
             "Option 2: wrong - that's counting up, this loop counts down.",
             "Option 3: wrong - the loop stops once i is no longer >= 1, so 0 never prints.",
             "Option 4: wrong - i starts at 5, not 4."};
-        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 1, 10, 5, 3, Q2_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1243,7 +1243,7 @@ int loop_forest()
             "Snippet 2: ends normally - i++ inside the loop body correctly moves it toward the exit condition.",
             "Snippet 3: infinite - i is never incremented anywhere inside the loop, so i < 10 stays true forever.",
             "Snippet 4: ends normally - counts down from 10 to 1, correctly decrementing each pass."};
-        correct_answer(Q3, Q3_option, 3, 10, 6, 4, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 3, 10, 6, 4, Q3_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1260,7 +1260,7 @@ int loop_forest()
             "Snippet 2: ends normally - i-- inside the loop body correctly moves it toward 0.",
             "Snippet 3: infinite - i = i does nothing; i never actually changes, so i > 0 stays true forever.",
             "Snippet 4: ends normally - counts down from 5, correctly decrementing each pass."};
-        correct_answer(Q3, Q3_option, 3, 10, 6, 4, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 3, 10, 6, 4, Q3_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1277,7 +1277,7 @@ int loop_forest()
             "Snippet 2: infinite - i steps by 3 (10,7,4,1,-2,...) and skips over exactly 0, so i != 0 never becomes false.",
             "Snippet 3: ends normally - i steps by 2 and lands exactly on 10, ending the loop.",
             "Snippet 4: ends normally - i increments each pass until it reaches 3."};
-        correct_answer(Q3, Q3_option, 2, 10, 6, 4, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 2, 10, 6, 4, Q3_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1294,7 +1294,7 @@ int loop_forest()
             "Snippet 2: ends normally - i++ inside the loop moves it toward the exit condition.",
             "Snippet 3: ends normally - the break statement exits once i exceeds 5.",
             "Snippet 4: infinite - i is never incremented anywhere inside the loop, so i <= 5 stays true forever."};
-        correct_answer(Q3, Q3_option, 4, 10, 6, 4, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 10, 6, 4, Q3_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1315,7 +1315,7 @@ int loop_forest()
             "Option 2: correct - i <= 5 lets the loop run one extra time (includes 5), the classic off-by-one bug.",
             "Option 3: wrong - starting i at 0 is intentional, since the goal is to include 0 in the sum.",
             "Option 4: wrong - that would overwrite total every time instead of accumulating it."};
-        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1333,7 +1333,7 @@ int loop_forest()
             "Option 2: correct - i < 5 stops one pass too early, skipping the number 5, the classic off-by-one bug.",
             "Option 3: wrong - starting i at 1 is intentional, since 0 shouldn't be included in this sum.",
             "Option 4: wrong - that would overwrite total every time instead of accumulating it."};
-        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1351,7 +1351,7 @@ int loop_forest()
             "Option 2: correct - i < 4 stops one pass too early, skipping the multiply-by-4 step.",
             "Option 3: wrong - starting i at 1 is intentional; multiplying by 0 would zero out the whole product.",
             "Option 4: wrong - that would overwrite product every time instead of multiplying into it."};
-        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1369,7 +1369,7 @@ int loop_forest()
             "Option 2: correct - i <= 6 lets the loop run one extra time (includes 6), the classic off-by-one bug.",
             "Option 3: wrong - starting i at 1 is intentional, since 0 shouldn't be part of this sum.",
             "Option 4: wrong - that would overwrite sum every time instead of accumulating it."};
-        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 10, 9, 5, Q4_explanation); // line 753
         if (HP <= 0)
             return HP;
     }
@@ -1387,11 +1387,11 @@ void After_forest_EQuest()
 
     printf("\n\nOhh wait... another traveler is waving for help.\n");
     printf("Want to help her out? (y/n): ");
-    char choice = Yes_No_loop(); // line 674
+    char choice = Yes_No_loop(); // line 734
 
     if (choice == 'y' || choice == 'Y')
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         printf("\n=============================SIDE QUEST===================================\n");
         printf("             Note: Side quests may give rewards but never cost HP.\n\n");
         printf("A traveler waves at you from a loop: \"Help me - I don't know if I'll ever get out!\"\n");
@@ -1411,7 +1411,7 @@ void After_forest_EQuest()
                 "Option 2: wrong - that would only be true if count were never modified inside the loop.",
                 "Option 3: wrong - the starting value being even or odd doesn't matter here; it counts down to 0 either way.",
                 "Option 4: wrong - while loops absolutely can and do stop, as long as the condition eventually becomes false."};
-            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 693
+            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 753
         }
         else if (Time == 2)
         {
@@ -1426,7 +1426,7 @@ void After_forest_EQuest()
                 "Option 2: wrong - that would only be true if i were never modified inside the loop.",
                 "Option 3: wrong - the starting value doesn't need to be negative; it steps up to 4 regardless.",
                 "Option 4: wrong - while loops absolutely can and do stop, as long as the condition eventually becomes false."};
-            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 693
+            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 753
         }
         else if (Time == 3)
         {
@@ -1441,7 +1441,7 @@ void After_forest_EQuest()
                 "Option 2: wrong - that would only be true if n were never modified inside the loop.",
                 "Option 3: wrong - integer division still reaches 0 whether n starts even or odd.",
                 "Option 4: wrong - do-while loops absolutely can and do stop, once the condition becomes false."};
-            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 693
+            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 753
         }
         else
         {
@@ -1456,7 +1456,7 @@ void After_forest_EQuest()
                 "Option 2: wrong - that would only be true if x were never modified inside the loop.",
                 "Option 3: wrong - the starting value being even or odd doesn't matter here; it counts down to 0 either way.",
                 "Option 4: wrong - a missing initializer doesn't stop a for loop from working; x is already initialized above."};
-            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 693
+            wrong = correct_answer(side_Q1, side_q1_options, 1, 0, 8, 3, side_Q1_explanation); // line 753
         }
 
         if (wrong == 0)
@@ -1493,7 +1493,7 @@ int array_cave()
     printf(" ||       This is how the old builders stored things in order: an array.          ||\n");
     printf(" ===================================================================================\n\n");
     printf("The Wizard: \"Careful, apprentice. Step wrong here, and you don't just fail - you corrupt what's next to you.\"\n");
-    enter_to_continue(); // line 3384
+    enter_to_continue(); // line 5979
 
     //_____________________________________question 1____________________________________
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
@@ -1512,7 +1512,7 @@ int array_cave()
             "Wrong - memory isn't automatically zeroed just because it's out of bounds.",
             "Correct! Valid indices are 0 to 4. arr[5] reaches past the array into memory it doesn't own.",
             "Wrong - this compiles fine; the danger is at runtime, not compile time."};
-        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -1529,7 +1529,7 @@ int array_cave()
             "Wrong - memory isn't automatically zeroed just because it's out of bounds.",
             "Correct! arr[-1] steps backward before the array's first element, into memory it doesn't own.",
             "Wrong - this compiles fine; the danger is at runtime, not compile time."};
-        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -1548,7 +1548,7 @@ int array_cave()
             "Wrong - there's no guarantee the extra read is 0; it's whatever memory happens to hold.",
             "Correct! i <= 4 lets the loop reach arr[4], one step past the last valid index (3).",
             "Wrong - this compiles fine; the danger is at runtime, not compile time."};
-        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 753
     }
     else
     {
@@ -1566,7 +1566,7 @@ int array_cave()
             "Wrong - memory isn't automatically zeroed just because it's out of bounds.",
             "Correct! p + 10 reaches 10 elements past arr, well outside memory the array owns.",
             "Wrong - this compiles fine; the danger is at runtime, not compile time."};
-        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 3, 10, 6, 4, Q1_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -1592,7 +1592,7 @@ int array_cave()
             "Correct! Starting at i=1 skips arr[0], and i<=4 reads one step past the array on the last pass.",
             "Wrong - sum = 0; is a proper initialization.",
             "Wrong - arrays are meant to be used inside loops; that's the whole point of indexing."};
-        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -1613,7 +1613,7 @@ int array_cave()
             "Correct! i <= 5 lets the loop reach arr[5], one step past the last valid index (4).",
             "Wrong - max = arr[0]; is a proper initialization.",
             "Wrong - int arr[5] correctly declares room for 5 elements."};
-        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -1634,7 +1634,7 @@ int array_cave()
             "Correct! Starting at i=1 skips the element at index 0, so count ends up one short.",
             "Wrong - count = 0; is a proper initialization.",
             "Wrong - looping over an array's indices to count elements is exactly how it's normally done."};
-        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 753
     }
     else
     {
@@ -1655,7 +1655,7 @@ int array_cave()
             "Correct! When i = 3, arr[i+1] becomes arr[4], one step past the last valid index (3).",
             "Wrong - total = 0; is a proper initialization.",
             "Wrong - i+1 is a perfectly valid index expression; the problem is only that it goes out of range here."};
-        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 12, 8, 5, Q2_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -1678,7 +1678,7 @@ int array_cave()
             "Wrong - that's arr[1], one step short.",
             "Correct! p points to arr[0]; *(p+2) is arr[2] = 15. Arrays and pointer arithmetic are the same thing under the hood.",
             "Wrong - this is completely valid C syntax."};
-        correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -1696,7 +1696,7 @@ int array_cave()
             "Wrong - that's arr[2], one step short of where *(p+2) lands.",
             "Correct! p starts at arr[1]; *(p+2) is two steps further, landing on arr[3] = 8.",
             "Wrong - this is completely valid C syntax."};
-        correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -1714,7 +1714,7 @@ int array_cave()
             "Wrong - that's arr[0], one step further back than *(p-1) actually goes.",
             "Correct! p starts at arr[2]; *(p-1) steps one element back, landing on arr[1] = 3.",
             "Wrong - this is completely valid C syntax."};
-        correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 3, 15, 10, 5, Q3_explanation); // line 753
     }
     else
     {
@@ -1733,7 +1733,7 @@ int array_cave()
             "Correct! p starts at arr[0]; p++ moves it one element forward, to arr[1] = 200.",
             "Wrong - reaching arr[2] would need p to be incremented twice, not once.",
             "Wrong - this is completely valid C syntax."};
-        correct_answer(Q3, Q3_option, 2, 15, 10, 5, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 2, 15, 10, 5, Q3_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -1744,7 +1744,7 @@ int array_cave()
 //___________________________________________________Shop After array cave ________________________________________
 void After_cave_shop()
 {
-    clear_screen(); // line 198
+    clear_screen(); // line 212
     printf("\n=================================================================================================\n");
     printf("                          There is a small wooden shop ahead \n");
     printf("                                Traveler %s goes inside\n", Name);
@@ -1760,7 +1760,7 @@ void After_cave_shop()
     printf("Enter Choose: ");
     while (1)
     {
-        Choose = answer_input_loop(); // line 661
+        Choose = answer_input_loop(); // line 716
         if (Choose == 1)
         {
             if (Coin >= 30)
@@ -1772,7 +1772,7 @@ void After_cave_shop()
                     HP = Max_HP;
                 }
                 Coin = Coin - 30;
-                current_status(); // line 639
+                current_status(); // line 684
                 break;
             }
             else
@@ -1787,7 +1787,7 @@ void After_cave_shop()
                 printf("Iron Shield obtained\nHP penalty canceled by 50%% for the next wrong answer.\n");
                 Coin = Coin - 175;
                 Iron_shield = 1;
-                current_status(); // line 639
+                current_status(); // line 684
                 break;
             }
             else
@@ -1819,15 +1819,15 @@ int Function_falls()
     printf("|                     that's what the old engineers called functions.                               |\n");
     printf("|  Now the wheel is jammed. Something's torn its scrolls apart and scattered them across the falls. |\n");
     printf("-----------------------------------------------------------------------------------------------------\n");
-    enter_to_continue(); // line 3384
-    clear_screen();      // line 198
+    enter_to_continue(); // line 5979
+    clear_screen();      // line 212
     printf("\nElder:\n");
     printf(" ______________________________________________________________________________________ \n");
     printf("|                           Careful this time, traveler.                               |\n");
     printf("|                   One wrong scroll and the whole wheel jams                          |\n");
     printf("|This region will cost you more if you fail - but it'll reward you more if you succeed |\n");
     printf("|______________________________________________________________________________________|\n");
-    enter_to_continue(); // line 3384
+    enter_to_continue(); // line 5979
 
     //________________________________________________________________Question NO 1_______________________________________________________________
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
@@ -1853,7 +1853,7 @@ int Function_falls()
             "Correct! C passes arguments by value. changeIt only modifies a copy of num, not the original.",
             "Wrong - num is a properly initialized local variable, not garbage.",
             "Wrong - this compiles and runs fine."};
-        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -1877,7 +1877,7 @@ int Function_falls()
             "Correct! C passes arguments by value. doubleIt only modifies a copy of num, not the original.",
             "Wrong - num is a properly initialized local variable, not garbage.",
             "Wrong - this compiles and runs fine."};
-        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -1901,7 +1901,7 @@ int Function_falls()
             "Correct! C passes arguments by value. reset only modifies a copy of score, not the original.",
             "Wrong - score is a properly initialized local variable, not garbage.",
             "Wrong - this compiles and runs fine."};
-        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 753
     }
     else
     {
@@ -1925,7 +1925,7 @@ int Function_falls()
             "Correct! C passes arguments by value. addFive only modifies a copy of val, not the original.",
             "Wrong - val is a properly initialized local variable, not garbage.",
             "Wrong - this compiles and runs fine."};
-        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 15, 11, 4, Q1_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -1950,7 +1950,7 @@ int Function_falls()
             "Wrong - that's not how this sum works out.",
             "Correct! It's a sum: 4+3+2+1+0 = 10. Recursion with a proper base case (n==0) always terminates.",
             "Wrong - n == 0 is a valid base case, so this recursion does terminate."};
-        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -1970,7 +1970,7 @@ int Function_falls()
             "Wrong - that's not how this sum works out.",
             "Correct! It's a sum: 5+4+3+2+1+0 = 15. Recursion with a proper base case (n==0) always terminates.",
             "Wrong - n == 0 is a valid base case, so this recursion does terminate."};
-        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -1990,7 +1990,7 @@ int Function_falls()
             "Wrong - that's not how this product works out.",
             "Correct! It's a product: 4*3*2*1 = 24. Recursion with a proper base case (n==1) always terminates.",
             "Wrong - n == 1 is a valid base case, so this recursion does terminate."};
-        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 753
     }
     else
     {
@@ -2010,7 +2010,7 @@ int Function_falls()
             "Wrong - that's not how this sum works out.",
             "Correct! It's a sum: 3+2+1+0 = 6. Recursion with a proper base case (n==0) always terminates.",
             "Wrong - n == 0 is a valid base case, so this recursion does terminate."};
-        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 18, 12, 5, Q2_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2036,7 +2036,7 @@ int Function_falls()
             "Wrong - that would happen only if both prints referred to the same variable.",
             "Wrong - close, but check the order of digits printed.",
             "Correct! Local count inside reset() shadows the global one. Prints 0, then the global 10 -> \"010\"."};
-        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2057,7 +2057,7 @@ int Function_falls()
             "Wrong - that would happen only if both prints referred to the same variable.",
             "Wrong - close, but check the order of digits printed.",
             "Correct! Local val inside show() shadows the global one. Prints 20, then the global 5 -> \"205\"."};
-        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2078,7 +2078,7 @@ int Function_falls()
             "Wrong - that would happen only if both prints referred to the same variable.",
             "Wrong - close, but check the order of digits printed.",
             "Correct! Local score inside update() shadows the global one. Prints 9, then the global 3 -> \"93\"."};
-        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 753
     }
     else
     {
@@ -2099,7 +2099,7 @@ int Function_falls()
             "Wrong - that would happen only if both prints referred to the same variable.",
             "Wrong - close, but check the order of digits printed.",
             "Correct! Local level inside change() shadows the global one. Prints 1, then the global 7 -> \"17\"."};
-        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 20, 14, 6, Q3_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2119,7 +2119,7 @@ int Function_falls()
             "Correct! With no prototype above main, the compiler doesn't know the function exists yet - implicit declaration warning/error in modern C.",
             "Wrong - a function fully defined before main() acts as its own prototype; no issue.",
             "Wrong - option 2 does cause an issue."};
-        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2134,7 +2134,7 @@ int Function_falls()
             "Correct! The compiler hasn't seen the function's signature yet, so it flags an implicit-declaration warning/error.",
             "Wrong - a call site is not a declaration; it doesn't create a prototype.",
             "Wrong - C does care about the order functions are declared or defined relative to their use."};
-        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2149,7 +2149,7 @@ int Function_falls()
             "Correct! A prototype tells the compiler the function's signature ahead of time, so calls before the definition are safe.",
             "Wrong - C has no such legal requirement; it's a compiler-warning issue, not a law.",
             "Wrong - a prototype declares a function's signature; the body still has to be written somewhere."};
-        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 753
     }
     else
     {
@@ -2164,7 +2164,7 @@ int Function_falls()
             "Correct! Without a prototype above main, the compiler doesn't yet know the function's signature.",
             "Wrong - it's typically a warning, not a guaranteed compile failure, though behavior can still be risky.",
             "Wrong - C has no such 'private' concept tied to prototypes."};
-        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 2, 22, 16, 7, Q4_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2187,7 +2187,7 @@ int Pointer_peak()
     printf("         One wrong step, and you fall into empty memory\n");
     printf("====================================================================\n");
     printf("He hands you a torch. \"Light your way. Trust the address, not the shadow.\"\n\n");
-    enter_to_continue(); // line 3384
+    enter_to_continue(); // line 5979
 
     printf("Note: Pointer Peak does not forgive mistakes. -15HP for each wrong answer\n");
 
@@ -2205,7 +2205,7 @@ int Pointer_peak()
             "Correct - *p = *p + 3 means \"take what p points to, add 3, store it back.\" Since p points to x, x becomes 10.",
             "Wrong - *p is a value, not an address.",
             "Wrong - this is valid, common pointer code."};
-        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2219,7 +2219,7 @@ int Pointer_peak()
             "Correct - *p = *p * 4 means \"take what p points to, multiply by 4, store it back.\" Since p points to x, x becomes 20.",
             "Wrong - *p is a value, not an address.",
             "Wrong - this is valid, common pointer code."};
-        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2233,7 +2233,7 @@ int Pointer_peak()
             "Correct - *p = *p - 5 means \"take what p points to, subtract 5, store it back.\" Since p points to x, x becomes 7.",
             "Wrong - *p is a value, not an address.",
             "Wrong - this is valid, common pointer code."};
-        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 753
     }
     else
     {
@@ -2247,7 +2247,7 @@ int Pointer_peak()
             "Correct - *p = *p + *p means \"add what p points to, to itself, store it back.\" Since p points to x, x becomes 6.",
             "Wrong - *p is a value, not an address.",
             "Wrong - this is valid, common pointer code."};
-        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 2, 10, 9, 4, Q1_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2270,7 +2270,7 @@ int Pointer_peak()
             "Correct - a > b is false (4 is not greater than 9), so the else runs: p = &b. Then *p = *p * 2 doubles b: 9 -> 18.",
             "Wrong - 4 is the value of a, not b, and a is untouched here.",
             "Wrong - 8 would be 4 doubled, but the pointer never points to a in this run."};
-        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2288,7 +2288,7 @@ int Pointer_peak()
             "Correct - a > b is true (15 is greater than 6), so the if runs: p = &a. Then *p = *p + 5 adds 5 to a: 15 -> 20.",
             "Wrong - 6 is the value of b, not a, and b is untouched here.",
             "Wrong - 11 would be 6 plus 5, but the pointer never points to b in this run."};
-        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2306,7 +2306,7 @@ int Pointer_peak()
             "Correct - a >= b is true (2 is equal to 2), so the if runs: p = &a. Then *p = *p * 3 triples a: 2 -> 6.",
             "Wrong - nothing in this code sets a variable to 0.",
             "Wrong - 4 is not the result of tripling 2."};
-        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 753
     }
     else
     {
@@ -2324,7 +2324,7 @@ int Pointer_peak()
             "Correct - a < b is false (8 is not less than 1), so the else runs: p = &b. Then *p = *p - 1 subtracts 1 from b: 1 -> 0.",
             "Wrong - 8 is the value of a, not b, and a is untouched here.",
             "Wrong - 7 would be 8 minus 1, but the pointer never points to a in this run."};
-        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 2, 15, 11, 5, Q2_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2348,7 +2348,7 @@ int Pointer_peak()
             "Wrong - sum starts at 0 but changes inside the loop; it does not stay 0.",
             "Wrong - 15 is not the sum of these four numbers.",
             "Correct - p starts at arr[0] and moves forward each loop (p++). It adds 1+2+3+4 = 10."};
-        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2367,7 +2367,7 @@ int Pointer_peak()
             "Wrong - 15 is only the last element, not the total.",
             "Wrong - sum starts at 0 but changes inside the loop; it does not stay 0.",
             "Correct - p starts at arr[0] and moves forward each loop (p++). It adds 5+10+15 = 30."};
-        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2386,7 +2386,7 @@ int Pointer_peak()
             "Wrong - sum starts at 0 but changes inside the loop; it does not stay 0.",
             "Wrong - 10 is not the sum of these five 1's.",
             "Correct - p starts at arr[0] and moves forward each loop (p++). It adds 1+1+1+1+1 = 5."};
-        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 753
     }
     else
     {
@@ -2405,7 +2405,7 @@ int Pointer_peak()
             "Wrong - sum starts at 0 but changes inside the loop; it does not stay 0.",
             "Wrong - 4 is only two of the elements, not all of them.",
             "Correct - p starts at arr[0] and moves forward each loop (p++). It adds 2+2+2+2 = 8."};
-        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 693
+        correct_answer(Q3, Q3_option, 4, 15, 12, 6, Q3_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2432,7 +2432,7 @@ int Pointer_peak()
             "Wrong - 6 and 10 do not divide evenly by 4, so they don't count.",
             "Correct - the loop walks through the array using the pointer. Only 4 and 8 divide evenly by 4 (remainder 0), so count becomes 2.",
             "Wrong - some numbers do divide by 4 (4 and 8), so count is not 0."};
-        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2454,7 +2454,7 @@ int Pointer_peak()
             "Wrong - more than 2 of these numbers divide evenly by 3.",
             "Correct - the loop walks through the array using the pointer. Every number (3,6,9,12,15) divides evenly by 3, so count becomes 5.",
             "Wrong - 3 is too low; all five elements qualify here."};
-        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2476,7 +2476,7 @@ int Pointer_peak()
             "Wrong - only 2 of these numbers divide evenly by 2, not 3.",
             "Correct - the loop walks through the array using the pointer. Only 2 and 4 divide evenly by 2 (remainder 0), so count becomes 2.",
             "Wrong - not every number here is even, so count isn't 5."};
-        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 753
     }
     else
     {
@@ -2498,7 +2498,7 @@ int Pointer_peak()
             "Wrong - some numbers do divide by 10, so count is not 0.",
             "Correct - the loop walks through the array using the pointer. Only 10, 20 and 30 divide evenly by 10 (remainder 0), so count becomes 3.",
             "Wrong - only 3 of these numbers qualify, not 5."};
-        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 693
+        correct_answer(Q4, Q4_option, 3, 15, 14, 7, Q4_explanation); // line 753
     }
     if (HP <= 0)
         return HP;
@@ -2540,7 +2540,7 @@ void Precaution_EQuest()
             "Correct! ptr advances with ptr++ AND i is added on top of it each pass, so *(ptr+i) drifts past the array and reads out-of-bounds memory.",
             "Wrong - 100 isn't the sum of these five numbers even under normal conditions.",
             "Wrong - this compiles fine; the problem only shows up at runtime."};
-        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 693
+        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 753
         printf("\n%s : Sir, your code is corrupted. It reads out of bounds - \"ptr++\" is causing the problem.\n", Name);
         printf("Remove it and the code should output 150.\n");
     }
@@ -2565,7 +2565,7 @@ void Precaution_EQuest()
             "Correct! The loop runs 6 times but the array only has 4 elements, so *(ptr+i) reads past the array into out-of-bounds memory.",
             "Wrong - 6 is just the loop count, not a guaranteed sum.",
             "Wrong - this compiles fine; the problem only shows up at runtime."};
-        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 693
+        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 753
         printf("\n%s : Sir, your code is corrupted. The loop runs 6 times but the array only has 4 elements.\n", Name);
         printf("Fix the loop to stop at 4 and the code should output 10.\n");
     }
@@ -2586,7 +2586,7 @@ void Precaution_EQuest()
             "Correct! ptr = arr + 5 already points 5 steps past a 3-element array, and dereferencing it reads out-of-bounds memory.",
             "Wrong - memory isn't automatically zeroed just because it's out of bounds.",
             "Wrong - this compiles fine; the problem only shows up at runtime."};
-        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 693
+        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 753
         printf("\n%s : Sir, your code is corrupted. \"arr + 5\" already points far past your 3-element array.\n", Name);
         printf("Fix the offset and the pointer will land back inside the array.\n");
     }
@@ -2609,7 +2609,7 @@ void Precaution_EQuest()
             "Correct! i <= 4 runs the loop one extra time, walking ptr one step past the end of the array before it's dereferenced.",
             "Wrong - memory isn't automatically zeroed just because it's out of bounds.",
             "Wrong - this compiles fine; the problem only shows up at runtime."};
-        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 693
+        correct_answer(QE, QE_option, 2, 0, 18, 1, QE_explanation); // line 753
         printf("\n%s : Sir, your code is corrupted. The loop condition \"i <= 4\" walks ptr one step too far.\n", Name);
         printf("Fix the condition and the pointer will land back inside the array.\n");
     }
@@ -2617,8 +2617,8 @@ void Precaution_EQuest()
     printf("---------------------------------------------------------\n");
     printf("Traveler : Thank you, here's a little something for your trouble.\n");
     printf("---------------------------------------------------------\n");
-    current_status(); // line 639
-    file_save();      // line 252
+    current_status(); // line 684
+    file_save();      // line 268
 }
 //___________________________________precoursion___________________________________________
 void precaution()
@@ -2636,7 +2636,7 @@ void precaution()
     printf("Enter choice: ");
     while (1)
     {
-        choice = answer_input_loop(); // line 661
+        choice = answer_input_loop(); // line 716
         if (choice == 1)
         {
             if (Coin >= 80)
@@ -2682,7 +2682,7 @@ int final_stage()
     printf("===========================================================================\n");
 
     //____________________________________question 1 - strcat buffer_______________________________________
-    enter_to_continue(); // line 3384
+    enter_to_continue(); // line 5979
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
     if (Time == 1)
     {
@@ -2696,7 +2696,7 @@ int final_stage()
             "Wrong - strcat doesn't add a space, it joins the strings directly, back to back.",
             "Wrong - tempting, but count the space: city[10] holds 9 characters + \\0, and \"CodeQuest\" is exactly 9, it fits perfectly.",
             "Wrong - strcat doesn't overwrite, it appends onto the end of the existing string."};
-        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2710,7 +2710,7 @@ int final_stage()
             "Wrong - strcat doesn't add a space, it joins the strings directly, back to back.",
             "Wrong - there's enough room here: word[8] holds up to 7 characters + \\0, and \"GoFast\" is only 6.",
             "Wrong - strcat doesn't overwrite, it appends onto the end of the existing string."};
-        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2724,7 +2724,7 @@ int final_stage()
             "Wrong - strcat doesn't add a space, it joins the strings directly, back to back.",
             "Wrong - tempting, but count the space: text[6] holds 5 characters + \\0, and \"HiBug\" is exactly 5, it fits perfectly.",
             "Wrong - strcat doesn't overwrite, it appends onto the end of the existing string."};
-        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 753
     }
     else
     {
@@ -2738,7 +2738,7 @@ int final_stage()
             "Wrong - strcat doesn't add a space, it joins the strings directly, back to back.",
             "Wrong - there's enough room here: msg[7] holds up to 6 characters + \\0, and \"CLang\" is only 5.",
             "Wrong - strcat doesn't overwrite, it appends onto the end of the existing string."};
-        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 693
+        correct_answer(Q1, Q1_option, 1, 20, 8, 3, Q1_explanation); // line 753
     }
     if (HP <= 0)
     {
@@ -2784,7 +2784,7 @@ int final_stage()
             "Wrong - count only increases on spaces, not on every character in the string.",
             "Correct - count only increments when s1[i] hits a space character, so it totals the number of spaces.",
             "Wrong - s1 is properly read and count starts at 0, so there's no garbage here."};
-        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 753
     }
     else if (Time == 2)
     {
@@ -2814,7 +2814,7 @@ int final_stage()
             "Wrong - the check tests for digits '0'-'9', not letters.",
             "Correct - count only increments when s1[i] falls between '0' and '9', so it totals the digit characters.",
             "Wrong - s1 is properly read and count starts at 0, so there's no garbage here."};
-        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 753
     }
     else if (Time == 3)
     {
@@ -2844,7 +2844,7 @@ int final_stage()
             "Wrong - the check tests for 'A'-'Z', which is uppercase, not lowercase.",
             "Correct - count only increments when s1[i] falls between 'A' and 'Z', so it totals the uppercase letters.",
             "Wrong - s1 is properly read and count starts at 0, so there's no garbage here."};
-        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 753
     }
     else
     {
@@ -2874,7 +2874,7 @@ int final_stage()
             "Wrong - the check tests for ',', not '.'.",
             "Correct - count only increments when s1[i] hits a comma character, so it totals the commas.",
             "Wrong - s1 is properly read and count starts at 0, so there's no garbage here."};
-        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 693
+        correct_answer(Q2, Q2_option, 3, 20, 5, 3, Q2_explanation); // line 753
     }
     if (HP <= 0)
     {
@@ -2903,7 +2903,7 @@ int NUL_POINTER()
     printf("   NULL POINTER: \"I AM THE ABSENCE. I AM WHAT YOU FORGOT TO CHECK.\n");
     printf("        Solve what I have twisted, or become part of the void.\"\n");
     printf("===========================================================================\n\n");
-    enter_to_continue(); // line 3384
+    enter_to_continue(); // line 5979
 
     printf("#include <stdio.h>\n");
     printf("#include <string.h>\n\n");
@@ -2980,15 +2980,15 @@ int NUL_POINTER()
         if (scanf("%d", &answer) != 1)
         {
             printf("Invalid input. Please enter an integer.\n");
-            flush_input(); // line 3378
+            flush_input(); // line 5972
             continue;
         }
-        flush_input(); // line 3378
+        flush_input(); // line 5972
         if (answer == correct_result)
         {
-            clear_screen();    // line 198
-            Congratulations(); // line 1593
-            file_reset();      // line 234
+            clear_screen();    // line 212
+            Congratulations(); // line 3029
+            file_reset();      // line 249
             solved = 1;
             break;
         }
@@ -3009,7 +3009,7 @@ int NUL_POINTER()
             {
                 HP = 0;
             }
-            current_status(); // line 639
+            current_status(); // line 684
             if (HP <= 0)
             {
                 break;
@@ -3109,11 +3109,11 @@ char lesson_navigation(int section, int total_sections)
     }
     if (input == '1' && section > 1)
     {
-        flush_input(); // line 3378
+        flush_input(); // line 5972
         return 'P';
     }
 
-    flush_input(); // line 3378
+    flush_input(); // line 5972
     printf("Invalid input.\n");
     return 'I';
 }
@@ -3126,7 +3126,7 @@ int menu_input(int min, int max)
     {
         if (scanf("%d", &choice) == 1)
         {
-            flush_input(); // line 3378
+            flush_input(); // line 5972
 
             if (choice >= min && choice <= max)
             {
@@ -3135,14 +3135,14 @@ int menu_input(int min, int max)
         }
         else
         {
-            flush_input(); // line 3378
+            flush_input(); // line 5972
         }
 
         printf("Invalid input.\n");
         printf("Enter your choice again: ");
     }
 }
-void traning_answer(char question[], char option[4][60], int correctAns, char explanation[4][150])
+void training_answer(char question[], char option[4][60], int correctAns, char explanation[4][150])
 {
     int i;
     int answer;
@@ -3155,7 +3155,7 @@ void traning_answer(char question[], char option[4][60], int correctAns, char ex
     }
 
     printf("Enter Answer: ");
-    answer = answer_input_loop(); // line 661
+    answer = answer_input_loop(); // line 716
 
     if (answer == correctAns)
     {
@@ -3177,8 +3177,6 @@ void traning_answer(char question[], char option[4][60], int correctAns, char ex
         printf("Explanation: %s\n",
                explanation[correctAns - 1]);
 
-        enter_to_continue(); // line 3384
-
         return;
     }
 }
@@ -3188,7 +3186,7 @@ void training()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         printf("\n============================================================\n");
         printf("                 C PROGRAMMING TRAINING\n");
         printf("============================================================\n\n");
@@ -3203,36 +3201,36 @@ void training()
         printf("0. Return to Main Menu\n\n");
 
         printf("Enter your choice: ");
-        choice = menu_input(0, 7); // line 1685
+        choice = menu_input(0, 7); // line 3121
 
         switch (choice)
         {
         case 1:
-            VariableDatatypeTraining(); // line 1809
+            VariableDatatypeTraining(); // line 3244
             break;
 
         case 2:
-            ConditionTraining(); // line 2011
+            ConditionTraining(); // line 3601
             break;
 
         case 3:
-            LoopTraining(); // line 2256
+            LoopTraining(); // line 4025
             break;
 
         case 4:
-            ArrayTraining(); // line 2525
+            ArrayTraining(); // line 4465
             break;
 
         case 5:
-            FunctionTraining(); // line 2730
+            FunctionTraining(); // line 4831
             break;
 
         case 6:
-            PointerTraining(); // line 2979
+            PointerTraining(); // line 5252
             break;
 
         case 7:
-            StringTraining(); // line 3184
+            StringTraining(); // line 5615
             break;
 
         case 0:
@@ -3249,7 +3247,7 @@ void VariableDatatypeTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         printf("\n============================================================\n");
         printf("             VARIABLE & DATATYPE CHAMBER\n");
@@ -3265,25 +3263,25 @@ void VariableDatatypeTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            V_D_lesson(); // line 1855
+            V_D_lesson(); // line 3290
             V_D_QuizUnlocked = 1;
         }
         else if (choice == 2)
         {
             if (V_D_QuizUnlocked == 1)
-                V_D_quiz(); // line 1953
+                V_D_quiz(); // line 3387
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -3297,7 +3295,7 @@ void V_D_lesson()
 
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         if (section == 1)
         {
@@ -3369,7 +3367,7 @@ void V_D_lesson()
         }
 
         printf("\n------------------------------------------------------------\n");
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
 
         if (navigation == 'N')
             section++;
@@ -3380,7 +3378,7 @@ void V_D_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -3388,53 +3386,214 @@ void V_D_lesson()
 
 void V_D_quiz()
 {
-    clear_screen(); // line 198
-
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
     printf("============================================================\n");
     printf("          VARIABLE & DATATYPE KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "What will be the output?\n\n"
+            "int age = 20;\n"
+            "age = 25;\n"
+            "printf(\"%d\", age);";
 
-    char Q1[] =
-        "What will be the output?\n\n"
-        "int age = 20;\n"
-        "age = 25;\n"
-        "printf(\"%d\", age);";
+        char Q1_option[4][60] =
+            {
+                "20",
+                "25",
+                "0",
+                "Garbage value"};
 
-    char Q1_option[4][60] =
-        {
-            "20",
-            "25",
-            "0",
-            "Garbage value"};
+        char Q1_explanation[4][150] =
+            {
+                "age is changed to 25 before printf.",
+                "age is changed from 20 to 25.",
+                "age has a valid assigned value.",
+                "age was initialized before printing."};
 
-    char Q1_explanation[4][150] =
-        {
-            "age is changed to 25 before printf.",
-            "age is changed from 20 to 25.",
-            "age has a valid assigned value.",
-            "age was initialized before printing."};
+        training_answer(Q1, Q1_option, 2, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    traning_answer(Q1, Q1_option, 2, Q1_explanation); // line 1708
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "Which datatype is normally used to store a single character?";
 
-    char Q2[] =
-        "Which datatype is normally used to store a single character?";
+        char Q2_option[4][60] =
+            {
+                "int",
+                "float",
+                "char",
+                "double"};
 
-    char Q2_option[4][60] =
-        {
-            "int",
-            "float",
-            "char",
-            "double"};
+        char Q2_explanation[4][150] =
+            {
+                "int stores whole numbers.",
+                "float stores decimal numbers.",
+                "char stores a single character.",
+                "double stores decimal values."};
 
-    char Q2_explanation[4][150] =
-        {
-            "int stores whole numbers.",
-            "float stores decimal numbers.",
-            "char stores a single character.",
-            "double stores decimal values."};
+        training_answer(Q2, Q2_option, 3, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation); // line 1708
-    enter_to_continue();                              // line 3384
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "Which of the following is a valid variable name?";
+
+        char Q3_option[4][60] =
+            {
+                "2ndVariable",
+                "my variable",
+                "_myVariable",
+                "int"};
+
+        char Q3_explanation[4][150] =
+            {
+                "Variable names cannot start with a digit.",
+                "Variable names cannot contain spaces.",
+                "Correct - variable names can start with an underscore.",
+                "int is a reserved keyword in C."};
+
+        training_answer(Q3, Q3_option, 3, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "What is the correct format specifier for printing a float value?";
+
+        char Q4_option[4][60] =
+            {
+                "%d",
+                "%f",
+                "%c",
+                "%s"};
+
+        char Q4_explanation[4][150] =
+            {
+                "%d is for int values.",
+                "Correct - %f is used to print float values.",
+                "%c is for single characters.",
+                "%s is for strings."};
+
+        training_answer(Q4, Q4_option, 2, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "What will be the output?\n\n"
+            "float pi = 3.14;\n"
+            "printf(\"%f\", pi);";
+
+        char Q5_option[4][60] =
+            {
+                "3.140000",
+                "3.14",
+                "0",
+                "Garbage value"};
+
+        char Q5_explanation[4][150] =
+            {
+                "Correct - pi is a float and will print as 3.140000.",
+                "Incorrect - %f prints the full float value.",
+                "Incorrect - pi has a valid assigned value.",
+                "Incorrect - pi was initialized before printing."};
+
+        training_answer(Q5, Q5_option, 1, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "Which datatype is used to store decimal numbers with double precision?";
+
+        char Q6_option[4][60] =
+            {
+                "int",
+                "float",
+                "char",
+                "double"};
+
+        char Q6_explanation[4][150] =
+            {
+                "int stores whole numbers.",
+                "float stores decimal numbers but with single precision.",
+                "char stores a single character.",
+                "Correct - double stores decimal values with double precision."};
+
+        training_answer(Q6, Q6_option, 4, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "Which of the following is NOT a valid variable name?";
+
+        char Q7_option[4][60] =
+            {
+                "myVariable",
+                "_myVariable",
+                "2ndVariable",
+                "variable_name"};
+
+        char Q7_explanation[4][150] =
+            {
+                "Correct - this is a valid variable name.",
+                "Correct - this is a valid variable name.",
+                "Incorrect - variable names cannot start with a digit.",
+                "Correct - this is a valid variable name."};
+
+        training_answer(Q7, Q7_option, 3, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "What is the correct format specifier for printing a character value?";
+
+        char Q8_option[4][60] =
+            {
+                "%d",
+                "%f",
+                "%c",
+                "%s"};
+
+        char Q8_explanation[4][150] =
+            {
+                "%d is for int values.",
+                "%f is for float values.",
+                "Correct - %c is used to print single character values.",
+                "%s is for strings."};
+
+        training_answer(Q8, Q8_option, 3, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 int Condition_quizUnlocked = 0;
@@ -3445,7 +3604,7 @@ void ConditionTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         printf("\n============================================================\n");
         printf("                    CONDITION CITADEL\n");
@@ -3461,26 +3620,26 @@ void ConditionTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            Condition_lesson(); // line 2058
+            Condition_lesson(); // line 3648
             Condition_quizUnlocked = 1;
         }
 
         else if (choice == 2)
         {
             if (Condition_quizUnlocked == 1)
-                Condition_quiz(); // line 2196
+                Condition_quiz(); // line 3794
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -3493,7 +3652,7 @@ void Condition_lesson()
     char navigation;
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         if (section == 1)
         {
@@ -3614,7 +3773,7 @@ void Condition_lesson()
         // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
         if (navigation == 'N')
         {
             section++;
@@ -3626,7 +3785,7 @@ void Condition_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -3634,57 +3793,232 @@ void Condition_lesson()
 
 void Condition_quiz()
 {
-    clear_screen(); // line 198
-
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
     printf("============================================================\n");
-    printf("               CONDITION KNOWLEDGE BATTLE\n");
+    printf("          CONDITIONAL STATEMENTS QUIZ\n");
     printf("============================================================\n\n");
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "What will be the output?\n\n"
+            "int x = 10;\n"
+            "if(x > 5)\n"
+            "    printf(\"Yes\");\n"
+            "else\n"
+            "    printf(\"No\");";
 
-    char Q1[] =
-        "What will be the output?\n\n"
-        "int x = 10;\n\n"
-        "if(x > 5)\n"
-        "{\n"
-        "    printf(\"YES\");\n"
-        "}\n"
-        "else\n"
-        "{\n"
-        "    printf(\"NO\");\n"
-        "}";
+        char Q1_option[4][60] =
+            {
+                "Yes",
+                "No",
+                "10",
+                "Error"};
 
-    char Q1_option[4][60] =
-        {
-            "YES",
-            "NO",
-            "YES NO",
-            "Nothing"};
+        char Q1_explanation[4][150] =
+            {
+                "Correct - 10 is greater than 5, so the if block executes.",
+                "The else block executes only when the condition is false.",
+                "10 is the value of x, not the output.",
+                "The code is valid C code."};
+        training_answer(Q1, Q1_option, 1, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    char Q1_explanation[4][150] =
-        {
-            "10 is greater than 5.",
-            "the condition is TRUE.",
-            "only one branch executes.",
-            "YES is printed."};
-    traning_answer(Q1, Q1_option, 1, Q1_explanation); // line 1708
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "What will be the output?\n\n"
+            "int age = 15;\n"
+            "if(age >= 18)\n"
+            "    printf(\"Adult\");\n"
+            "else\n"
+            "    printf(\"Minor\");";
 
-    char Q2[] =
-        "Which operator checks whether two values are equal?";
+        char Q2_option[4][60] =
+            {
+                "Adult",
+                "Minor",
+                "15",
+                "Error"};
 
-    char Q2_option[4][60] =
-        {
-            "=",
-            "==",
-            "!=",
-            ">="};
+        char Q2_explanation[4][150] =
+            {
+                "The condition age >= 18 is false because age is 15.",
+                "Correct - 15 is less than 18, so the else block executes.",
+                "15 is the value of age, not the output.",
+                "The code is valid C code."};
 
-    char Q2_explanation[4][150] =
-        {
-            "= is assignment.",
-            "== compares two values.",
-            "!= means not equal.",
-            ">= means greater than or equal."};
-    traning_answer(Q2, Q2_option, 2, Q2_explanation); // line 1708
-    enter_to_continue();                              // line 3384
+        training_answer(Q2, Q2_option, 2, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "What will be the output?\n\n"
+            "int n = 20;\n"
+            "if(n == 20)\n"
+            "    printf(\"Match\");\n"
+            "else\n"
+            "    printf(\"No Match\");";
+
+        char Q3_option[4][60] =
+            {
+                "20",
+                "No Match",
+                "Match",
+                "Error"};
+
+        char Q3_explanation[4][150] =
+            {
+                "20 is the value of n, not the printed output.",
+                "The condition is true, so the else block does not execute.",
+                "Correct - n is equal to 20, so Match is printed.",
+                "The code is valid C code."};
+
+        training_answer(Q3, Q3_option, 3, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "What will be the output?\n\n"
+            "int marks = 40;\n"
+            "if(marks >= 50)\n"
+            "    printf(\"Pass\");\n"
+            "else\n"
+            "    printf(\"Fail\");";
+
+        char Q4_option[4][60] =
+            {
+                "Pass",
+                "40",
+                "Fail",
+                "Error"};
+
+        char Q4_explanation[4][150] =
+            {
+                "The condition marks >= 50 is false.",
+                "40 is the value of marks, not the output.",
+                "Correct - 40 is less than 50, so Fail is printed.",
+                "The code is valid C code."};
+
+        training_answer(Q4, Q4_option, 3, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "Which operator is used to check whether two values are equal in C?";
+
+        char Q5_option[4][60] =
+            {
+                "=",
+                "==",
+                "!=",
+                ">="};
+
+        char Q5_explanation[4][150] =
+            {
+                "= is the assignment operator.",
+                "Correct - == is the equality comparison operator.",
+                "!= checks whether two values are not equal.",
+                ">= checks whether one value is greater than or equal to another."};
+
+        training_answer(Q5, Q5_option, 2, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "Which condition correctly checks whether x is between 10 and 20, including both limits?";
+
+        char Q6_option[4][60] =
+            {
+                "x > 10 && x < 20",
+                "x >= 10 && x <= 20",
+                "x >= 10 || x <= 20",
+                "x == 10 && x == 20"};
+
+        char Q6_explanation[4][150] =
+            {
+                "This excludes 10 and 20.",
+                "Correct - both boundaries are included using >= and <=.",
+                "Using || would allow values outside the range.",
+                "A value cannot normally be both 10 and 20 at the same time."};
+
+        training_answer(Q6, Q6_option, 2, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "What does the expression !(x > 10) mean?";
+
+        char Q7_option[4][60] =
+            {
+                "x is greater than 10",
+                "x is less than or equal to 10",
+                "x is exactly 10",
+                "x is not equal to 10"};
+
+        char Q7_explanation[4][150] =
+            {
+                "That is the original condition, before applying !.",
+                "Correct - ! reverses x > 10, giving x <= 10.",
+                "The expression also allows values below 10.",
+                "Not equal to 10 also includes values greater than 10."};
+        training_answer(Q7, Q7_option, 2, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "What will be the output?\n\n"
+            "int n = 12;\n"
+            "if(n % 2 == 0 || n > 20)\n"
+            "    printf(\"True\");\n"
+            "else\n"
+            "    printf(\"False\");";
+
+        char Q8_option[4][60] =
+            {
+                "True",
+                "False",
+                "12",
+                "Error"};
+
+        char Q8_explanation[4][150] =
+            {
+                "Correct - 12 % 2 is 0, so the first condition is true.",
+                "The second condition does not need to be true because || requires only one true condition.",
+                "12 is the value of n, not the output.",
+                "The expression is valid C syntax."};
+
+        training_answer(Q8, Q8_option, 1, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 int Loop_quizUnlocked = 0;
@@ -3694,7 +4028,7 @@ void LoopTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         printf("\n============================================================\n");
         printf("                    LOOP LABYRINTH\n");
@@ -3710,26 +4044,26 @@ void LoopTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            Loop_lesson(); // line 2303
+            Loop_lesson(); // line 4072
             Loop_quizUnlocked = 1;
         }
 
         else if (choice == 2)
         {
             if (Loop_quizUnlocked == 1)
-                Loop_quiz(); // line 2466
+                Loop_quiz(); // line 4235
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -3743,7 +4077,7 @@ void Loop_lesson()
 
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         if (section == 1)
         {
             printf("============================================================\n");
@@ -3880,7 +4214,7 @@ void Loop_lesson()
 
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
         if (navigation == 'N')
         {
             section++;
@@ -3892,7 +4226,7 @@ void Loop_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -3900,55 +4234,231 @@ void Loop_lesson()
 
 void Loop_quiz()
 {
-    clear_screen(); // line 198
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
 
     printf("============================================================\n");
     printf("                    LOOP KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "What will be the output?\n\n"
+            "for(int i = 1; i <= 4; i++)\n"
+            "    printf(\"%d \", i);";
 
-    char Q1[] =
-        "What will be the output?\n\n"
-        "int i;\n"
-        "for(i = 1; i <= 3; i++)\n"
-        "{\n"
-        "    printf(\"%d \", i);\n"
-        "}";
+        char Q1_option[4][60] =
+            {
+                "0 1 2 3",
+                "1 2 3 4",
+                "1 2 3",
+                "4 3 2 1"};
 
-    char Q1_option[4][60] =
-        {
-            "1 2 3",
-            "0 1 2",
-            "1 2 3 4",
-            "3 2 1"};
+        char Q1_explanation[4][150] =
+            {
+                "The loop starts from 1, so 0 is not printed.",
+                "Correct - i takes the values 1, 2, 3, and 4.",
+                "The condition i <= 4 allows 4 to be printed.",
+                "i is increased after each iteration, so the order is ascending."};
 
-    char Q1_explanation[4][150] =
-        {
-            "i prints 1, 2, and 3.",
-            "i starts at 1.",
-            "i becomes 4 and the condition becomes false.",
-            "i is increasing."};
+        training_answer(Q1, Q1_option, 2, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    traning_answer(Q1, Q1_option, 1, Q1_explanation); // line 1708
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "How many times will this loop execute?\n\n"
+            "for(int i = 0; i < 5; i++)\n"
+            "    printf(\"Hello\");";
 
-    char Q2[] =
-        "Which loop executes its body at least once?";
+        char Q2_option[4][60] =
+            {
+                "4",
+                "5",
+                "6",
+                "0"};
 
-    char Q2_option[4][60] =
-        {
-            "for loop",
-            "while loop",
-            "do-while loop",
-            "nested loop"};
+        char Q2_explanation[4][150] =
+            {
+                "The loop includes i values from 0 through 4.",
+                "Correct - the loop executes 5 times.",
+                "The loop stops when i becomes 5.",
+                "The initial condition i < 5 is true, so the loop executes."};
 
-    char Q2_explanation[4][150] =
-        {
-            "for checks its condition first.",
-            "while checks its condition first.",
-            "do-while executes before checking.",
-            "nested only describes loops inside loops."};
+        training_answer(Q2, Q2_option, 2, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation); // line 1708
-    enter_to_continue();                              // line 3384
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "Which part of a for loop changes the loop variable after each iteration?";
+
+        char Q3_option[4][60] =
+            {
+                "Initialization",
+                "Condition",
+                "Update expression",
+                "Loop body"};
+
+        char Q3_explanation[4][150] =
+            {
+                "Initialization gives the loop variable its starting value.",
+                "The condition determines whether another iteration will occur.",
+                "Correct - the update expression changes the loop variable.",
+                "The loop body contains the statements that are repeatedly executed."};
+
+        training_answer(Q3, Q3_option, 3, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "What will happen if the condition of a while loop is false before the first iteration?";
+
+        char Q4_option[4][60] =
+            {
+                "The loop executes once",
+                "The loop executes twice",
+                "The loop body does not execute",
+                "The program produces an error"};
+
+        char Q4_explanation[4][150] =
+            {
+                "A while loop checks its condition before executing its body.",
+                "There is no rule that makes a while loop execute twice.",
+                "Correct - if the initial condition is false, the loop body is skipped.",
+                "A false condition does not automatically cause a program error."};
+
+        training_answer(Q4, Q4_option, 3, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "What will be the output?\n\n"
+            "int i = 5;\n"
+            "while(i > 2)\n"
+            "{\n"
+            "    printf(\"%d \", i);\n"
+            "    i--;\n"
+            "}";
+
+        char Q5_option[4][60] =
+            {
+                "5 4 3",
+                "5 4 3 2",
+                "3 4 5",
+                "2 3 4"};
+
+        char Q5_explanation[4][150] =
+            {
+                "Correct - i is printed as 5, 4, and 3 before becoming 2.",
+                "2 is not printed because the condition is i > 2.",
+                "The loop decreases i, so the values are printed in descending order.",
+                "The loop starts at 5, not 2."};
+
+        training_answer(Q5, Q5_option, 1, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "What does the break statement do when used inside a loop?";
+
+        char Q6_option[4][60] =
+            {
+                "Skips the current iteration",
+                "Restarts the loop",
+                "Immediately terminates the loop",
+                "Pauses the program"};
+
+        char Q6_explanation[4][150] =
+            {
+                "continue skips the current iteration.",
+                "break does not restart the loop.",
+                "Correct - break immediately exits the loop.",
+                "break does not pause the program."};
+
+        training_answer(Q6, Q6_option, 3, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "What will be the output?\n\n"
+            "for(int i = 1; i <= 5; i++)\n"
+            "{\n"
+            "    if(i == 3)\n"
+            "        continue;\n"
+            "    printf(\"%d \", i);\n"
+            "}";
+
+        char Q7_option[4][60] =
+            {
+                "1 2 3 4 5",
+                "1 2 4 5",
+                "3",
+                "1 2"};
+
+        char Q7_explanation[4][150] =
+            {
+                "continue prevents 3 from being printed.",
+                "Correct - when i is 3, continue skips that iteration, so 1, 2, 4, and 5 are printed.",
+                "continue does not print only the value 3.",
+                "The loop continues after 3 and prints 4 and 5."};
+
+        training_answer(Q7, Q7_option, 2, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "How many times will the inner printf execute?\n\n"
+            "for(int i = 1; i <= 3; i++)\n"
+            "{\n"
+            "    for(int j = 1; j <= 2; j++)\n"
+            "        printf(\"*\");\n"
+            "}";
+
+        char Q8_option[4][60] =
+            {
+                "3",
+                "5",
+                "6",
+                "9"};
+
+        char Q8_explanation[4][150] =
+            {
+                "The inner loop executes twice for each outer iteration.",
+                "The total number is greater than 5.",
+                "Correct - the outer loop runs 3 times and the inner loop runs 2 times each, giving 3 x 2 = 6.",
+                "3 x 2 gives 6, not 9."};
+
+        training_answer(Q8, Q8_option, 3, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 int Array_quizUnlocked = 0;
@@ -3958,7 +4468,7 @@ void ArrayTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         printf("\n============================================================\n");
         printf("                      ARRAY ARENA\n");
@@ -3974,26 +4484,26 @@ void ArrayTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            Array_lesson(); // line 2572
+            Array_lesson(); // line 4512
             Array_quizUnlocked = 1;
         }
 
         else if (choice == 2)
         {
             if (Array_quizUnlocked == 1)
-                Array_quiz(); // line 2673
+                Array_quiz(); // line 4613
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -4007,7 +4517,7 @@ void Array_lesson()
 
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen();   // line 198
+        clear_screen();   // line 212
         if (section == 1) // SECTION 1: Array Cave
         {
             printf("============================================================\n");
@@ -4082,7 +4592,7 @@ void Array_lesson()
         // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
         if (navigation == 'N')
         {
             section++;
@@ -4094,7 +4604,7 @@ void Array_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -4102,53 +4612,219 @@ void Array_lesson()
 
 void Array_quiz()
 {
-    clear_screen(); // line 198
-
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
     printf("============================================================\n");
-    printf("                    ARRAY KNOWLEDGE BATTLE\n");
+    printf("                ARRAYS KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
 
-    char Q1[] =
-        "From which index does an array start in C?";
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "Which is the correct way to declare an integer array with 5 elements?";
 
-    char Q1_option[4][60] =
-        {
-            "0",
-            "1",
-            "-1",
-            "It depends on the array"};
+        char Q1_option[4][60] =
+            {
+                "int arr;",
+                "int arr[5];",
+                "array int arr[5];",
+                "int[5] arr;"};
 
-    char Q1_explanation[4][150] =
-        {
-            "C arrays use zero-based indexing.",
-            "index 1 is the second element.",
-            "arrays do not begin at -1.",
-            "normal C arrays start at 0."};
+        char Q1_explanation[4][150] =
+            {
+                "This declares only one integer variable.",
+                "Correct - int arr[5] declares an integer array with 5 elements.",
+                "array is not a keyword used to declare arrays in C.",
+                "In C, the array size is written after the array name."};
 
-    traning_answer(Q1, Q1_option, 1, Q1_explanation); // line 1708
+        training_answer(Q1, Q1_option, 2, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    char Q2[] =
-        "What is wrong with this code?\n\n"
-        "int arr[3] = {10, 20, 30};\n"
-        "printf(\"%d\", arr[3]);";
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "If int numbers[6] is declared, what is the index of the last element?";
 
-    char Q2_option[4][60] =
-        {
-            "arr[3] contains 30",
-            "The array should contain 4 elements",
-            "arr[3] is outside the valid index range",
-            "printf cannot print arrays"};
+        char Q2_option[4][60] =
+            {
+                "6",
+                "5",
+                "4",
+                "0"};
 
-    char Q2_explanation[4][150] =
-        {
-            "30 is stored at arr[2].",
-            "the array correctly has 3 elements.",
-            "valid indexes are 0, 1, and 2.",
-            "printf can print an array element."};
+        char Q2_explanation[4][150] =
+            {
+                "Index 6 is outside the valid range of the array.",
+                "Correct - an array with 6 elements has indices from 0 through 5.",
+                "Index 4 refers to the fifth element.",
+                "Index 0 refers to the first element."};
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation); // line 1708
+        training_answer(Q2, Q2_option, 2, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    enter_to_continue(); // line 3384
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "If int marks[5] = {10, 20, 30, 40, 50}; which index contains 40?";
+
+        char Q3_option[4][60] =
+            {
+                "2",
+                "3",
+                "4",
+                "5"};
+
+        char Q3_explanation[4][150] =
+            {
+                "marks[2] contains 30.",
+                "Correct - 40 is stored at index 3.",
+                "marks[4] contains 50.",
+                "Index 5 is outside the valid range."};
+
+        training_answer(Q3, Q3_option, 2, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "Which statement correctly changes the third element of arr to 100?\n\n"
+            "int arr[5] = {10, 20, 30, 40, 50};";
+
+        char Q4_option[4][60] =
+            {
+                "arr[3] = 100;",
+                "arr[2] = 100;",
+                "arr[1] = 100;",
+                "arr[5] = 100;"};
+
+        char Q4_explanation[4][150] =
+            {
+                "Index 3 refers to the fourth element.",
+                "Correct - the third element has index 2 because indexing starts at 0.",
+                "Index 1 refers to the second element.",
+                "Index 5 is outside the valid range of this array."};
+
+        training_answer(Q4, Q4_option, 2, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "What will be the output?\n\n"
+            "int a[4] = {5, 10, 15, 20};\n"
+            "printf(\"%d\", a[2]);";
+
+        char Q5_option[4][60] =
+            {
+                "5",
+                "10",
+                "15",
+                "20"};
+
+        char Q5_explanation[4][150] =
+            {
+                "a[0] contains 5.",
+                "a[1] contains 10.",
+                "Correct - a[2] contains 15.",
+                "a[3] contains 20."};
+
+        training_answer(Q5, Q5_option, 3, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "Which loop correctly visits every element of an array with 8 elements?";
+
+        char Q6_option[4][60] =
+            {
+                "for(int i = 0; i <= 8; i++)",
+                "for(int i = 1; i < 8; i++)",
+                "for(int i = 0; i < 8; i++)",
+                "for(int i = 0; i <= 6; i++)"};
+
+        char Q6_explanation[4][150] =
+            {
+                "i <= 8 attempts to access index 8, which is outside the array.",
+                "Starting from 1 skips the first element at index 0.",
+                "Correct - this visits every index from 0 through 7.",
+                "i <= 6 stops at index 6, so the last element at index 7 is skipped."};
+
+        training_answer(Q6, Q6_option, 3, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "What will be the value of sum?\n\n"
+            "int arr[4] = {2, 4, 6, 8};\n"
+            "int sum = 0;\n"
+            "for(int i = 0; i < 4; i++)\n"
+            "    sum += arr[i];";
+
+        char Q7_option[4][60] =
+            {
+                "10",
+                "16",
+                "20",
+                "24"};
+
+        char Q7_explanation[4][150] =
+            {
+                "10 is only the sum of the first two elements.",
+                "16 is not the total sum of the array.",
+                "Correct - 2 + 4 + 6 + 8 equals 20.",
+                "24 is not the sum of all four elements."};
+
+        training_answer(Q7, Q7_option, 3, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "Which statement correctly checks whether the first element of arr is even?\n\n"
+            "int arr[5] = {8, 11, 15, 20, 25};";
+
+        char Q8_option[4][60] =
+            {
+                "if(arr[1] % 2 == 0)",
+                "if(arr[0] % 2 == 0)",
+                "if(arr[0] / 2 == 0)",
+                "if(arr[5] % 2 == 0)"};
+
+        char Q8_explanation[4][150] =
+            {
+                "arr[1] refers to the second element, not the first.",
+                "Correct - arr[0] is the first element and % 2 checks whether it is even.",
+                "Division by 2 does not correctly determine whether a number is even.",
+                "arr[5] is outside the valid range of the array."};
+
+        training_answer(Q8, Q8_option, 2, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 int Function_quizUnlocked = 0;
@@ -4158,7 +4834,7 @@ void FunctionTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         printf("\n============================================================\n");
         printf("                   FUNCTION FORTRESS\n");
         printf("============================================================\n\n");
@@ -4173,26 +4849,26 @@ void FunctionTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            Function_lesson(); // line 2776
+            Function_lesson(); // line 4877
             Function_quizUnlocked = 1;
         }
 
         else if (choice == 2)
         {
             if (Function_quizUnlocked == 1)
-                Function_quiz(); // line 2919
+                Function_quiz(); // line 5020
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -4206,7 +4882,7 @@ void Function_lesson()
 
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         if (section == 1)
         {
             printf("========================================\n");
@@ -4323,7 +4999,7 @@ void Function_lesson()
         // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
         if (navigation == 'N')
         {
             section++;
@@ -4335,7 +5011,7 @@ void Function_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -4343,54 +5019,233 @@ void Function_lesson()
 
 void Function_quiz()
 {
-    clear_screen(); // line 198
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
     printf("============================================================\n");
-    printf("                 FUNCTION KNOWLEDGE BATTLE\n");
+    printf("                FUNCTION KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
 
-    char Q1[] =
-        "What will be the output?\n\n"
-        "int add(int a, int b)\n"
-        "{\n"
-        "    return a + b;\n"
-        "}\n\n"
-        "printf(\"%d\", add(5, 3));";
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "What will be the output?\n\n"
+            "int add(int a, int b)\n"
+            "{\n"
+            "    return a + b;\n"
+            "}\n\n"
+            "printf(\"%d\", add(5, 3));";
 
-    char Q1_option[4][60] =
-        {
-            "5",
-            "3",
-            "8",
-            "53"};
+        char Q1_option[4][60] =
+            {
+                "5",
+                "3",
+                "8",
+                "53"};
 
-    char Q1_explanation[4][150] =
-        {
-            "5 is the first argument.",
-            "3 is the second argument.",
-            "5 + 3 equals 8.",
-            "the values are added numerically."};
+        char Q1_explanation[4][150] =
+            {
+                "5 is the first argument passed to the function.",
+                "3 is the second argument passed to the function.",
+                "Correct - the function returns 5 + 3, which is 8.",
+                "The two integer arguments are added numerically, not joined as text."};
 
-    traning_answer(Q1, Q1_option, 3, Q1_explanation); // line 1708
+        training_answer(Q1, Q1_option, 3, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    char Q2[] =
-        "What is the main purpose of a function?";
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "What is the main purpose of the return statement in a function?";
 
-    char Q2_option[4][60] =
-        {
-            "To store multiple values",
-            "To repeat code automatically",
-            "To perform a specific reusable task",
-            "To create an array"};
+        char Q2_option[4][60] =
+            {
+                "To repeat the function",
+                "To send a value back to the caller",
+                "To declare a variable",
+                "To stop the entire program"};
 
-    char Q2_explanation[4][150] =
-        {
-            "arrays store multiple values.",
-            "loops are used for repetition.",
-            "functions perform reusable tasks.",
-            "arrays are declared separately."};
+        char Q2_explanation[4][150] =
+            {
+                "A return statement does not repeat a function.",
+                "Correct - return sends a value back to the code that called the function.",
+                "Variables are declared separately from the return statement.",
+                "return exits the current function, not necessarily the entire program."};
 
-    traning_answer(Q2, Q2_option, 3, Q2_explanation); // line 1708
-    enter_to_continue();                              // line 3384
+        training_answer(Q2, Q2_option, 2, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "Which function declaration correctly accepts two integers and returns an integer?";
+
+        char Q3_option[4][60] =
+            {
+                "int add(int a, int b);",
+                "void add(int a, int b);",
+                "int add(a, b);",
+                "add(int a, int b);"};
+
+        char Q3_explanation[4][150] =
+            {
+                "Correct - int specifies the return type and the two int parameters are declared.",
+                "void means the function does not return a value.",
+                "The parameter types should be specified in a standard function declaration.",
+                "A return type is required in a normal function declaration."};
+
+        training_answer(Q3, Q3_option, 1, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "What will be the output?\n\n"
+            "void show()\n"
+            "{\n"
+            "    printf(\"Hello\");\n"
+            "}\n\n"
+            "show();";
+
+        char Q4_option[4][60] =
+            {
+                "show",
+                "Hello",
+                "void",
+                "Error"};
+
+        char Q4_explanation[4][150] =
+            {
+                "show is the function name, not the text printed.",
+                "Correct - calling show() executes printf(\"Hello\").",
+                "void specifies that the function does not return a value.",
+                "The function definition and call are valid C code."};
+
+        training_answer(Q4, Q4_option, 2, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "What will be the output?\n\n"
+            "int square(int x)\n"
+            "{\n"
+            "    return x * x;\n"
+            "}\n\n"
+            "printf(\"%d\", square(4));";
+
+        char Q5_option[4][60] =
+            {
+                "4",
+                "8",
+                "16",
+                "20"};
+
+        char Q5_explanation[4][150] =
+            {
+                "The function multiplies 4 by itself rather than returning 4.",
+                "4 multiplied by 4 is not 8.",
+                "Correct - square(4) returns 4 * 4, which is 16.",
+                "20 is not the result of 4 * 4."};
+
+        training_answer(Q5, Q5_option, 3, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "Which statement correctly calls a function named calculate that takes two integers?";
+
+        char Q6_option[4][60] =
+            {
+                "calculate;",
+                "calculate(5, 10);",
+                "call calculate(5, 10);",
+                "calculate[int, int];"};
+
+        char Q6_explanation[4][150] =
+            {
+                "A function that takes parameters must receive them when called.",
+                "Correct - the function is called using its name followed by the arguments in parentheses.",
+                "call is not a C keyword used to call functions.",
+                "Square brackets are not used to pass function arguments."};
+
+        training_answer(Q6, Q6_option, 2, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "What will be the output?\n\n"
+            "int change(int x)\n"
+            "{\n"
+            "    x = 20;\n"
+            "    return x;\n"
+            "}\n\n"
+            "int n = 5;\n"
+            "printf(\"%d\", change(n));";
+
+        char Q7_option[4][60] =
+            {
+                "5",
+                "20",
+                "25",
+                "Error"};
+
+        char Q7_explanation[4][150] =
+            {
+                "The function changes its local parameter x to 20 before returning it.",
+                "Correct - x is assigned 20 inside the function, so change(n) returns 20.",
+                "The function does not add 5 and 20.",
+                "The function definition and call are valid C code."};
+
+        training_answer(Q7, Q7_option, 2, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "Which statement about function parameters is correct?";
+
+        char Q8_option[4][60] =
+            {
+                "A function can never have parameters",
+                "Parameters receive values when the function is called",
+                "Parameters must always be global variables",
+                "Parameters can only be of type int"};
+
+        char Q8_explanation[4][150] =
+            {
+                "Functions can have one or more parameters.",
+                "Correct - arguments passed during a function call are received by the corresponding parameters.",
+                "Function parameters are local to the function.",
+                "Parameters can have different data types depending on the function."};
+
+        training_answer(Q8, Q8_option, 2, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 int Pointer_quizUnlocked = 0;
@@ -4400,7 +5255,7 @@ void PointerTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         printf("\n============================================================\n");
         printf("                     POINTER PEAK\n");
         printf("============================================================\n\n");
@@ -4415,26 +5270,26 @@ void PointerTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            Pointer_lesson(); // line 3025
+            Pointer_lesson(); // line 5298
             Pointer_quizUnlocked = 1;
         }
 
         else if (choice == 2)
         {
             if (Pointer_quizUnlocked == 1)
-                Pointer_quiz(); // line 3125
+                Pointer_quiz(); // line 5398
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -4448,7 +5303,7 @@ void Pointer_lesson()
 
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         if (section == 1)
         {
             printf("============================================================\n");
@@ -4522,7 +5377,7 @@ void Pointer_lesson()
         // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
         if (navigation == 'N')
         {
             section++;
@@ -4534,7 +5389,7 @@ void Pointer_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -4542,56 +5397,218 @@ void Pointer_lesson()
 
 void Pointer_quiz()
 {
-    clear_screen(); // line 198
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
     printf("============================================================\n");
-    printf("                  POINTER KNOWLEDGE BATTLE\n");
+    printf("                POINTERS KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
 
-    char Q1[] =
-        "What will be the output?\n\n"
-        "int x = 10;\n"
-        "int *ptr = &x;\n"
-        "*ptr = 20;\n"
-        "printf(\"%d\", x);";
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "What is a pointer in C?";
 
-    char Q1_option[4][60] =
-        {
-            "10",
-            "20",
-            "The address of x",
-            "Garbage value"};
+        char Q1_option[4][60] =
+            {
+                "A variable that stores only integers",
+                "A variable that stores the address of another variable",
+                "A function that returns an address",
+                "A variable that can never change"};
 
-    char Q1_explanation[4][150] =
-        {
-            "*ptr changes x to 20.",
-            "*ptr accesses x and changes it to 20.",
-            "%d prints the value, not the address.",
-            "x is initialized."};
+        char Q1_explanation[4][150] =
+            {
+                "A pointer can store addresses of different types of variables.",
+                "Correct - a pointer stores the memory address of another variable.",
+                "A pointer is a variable, not a function.",
+                "A pointer can be changed to store a different address."};
 
-    traning_answer(Q1, Q1_option, 2, Q1_explanation); // line 1708
+        training_answer(Q1, Q1_option, 2, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    char Q2[] =
-        "What is wrong with this code?\n\n"
-        "int x = 10;\n"
-        "int *ptr;\n"
-        "*ptr = 20;";
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "Which symbol is used to declare a pointer variable in C?";
 
-    char Q2_option[4][60] =
-        {
-            "x should be float",
-            "ptr is not pointing to a valid address",
-            "20 cannot be stored in a pointer",
-            "The * operator cannot be used here"};
+        char Q2_option[4][60] =
+            {
+                "&",
+                "*",
+                "%",
+                "#"};
 
-    char Q2_explanation[4][150] =
-        {
-            "x can be an int.",
-            "ptr has not been initialized with a valid address.",
-            "20 can be assigned through a valid int pointer.",
-            "* is used for dereferencing."};
+        char Q2_explanation[4][150] =
+            {
+                "& is commonly used to get the address of a variable.",
+                "Correct - * is used when declaring a pointer variable.",
+                "% is used with format specifiers and the modulus operator.",
+                "# is used for preprocessor directives."};
 
-    traning_answer(Q2, Q2_option, 2, Q2_explanation); // line 1708
-    enter_to_continue();                              // line 3384
+        training_answer(Q2, Q2_option, 2, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "What does the & operator do when used with a variable?";
+
+        char Q3_option[4][60] =
+            {
+                "Gets the value of the variable",
+                "Gets the address of the variable",
+                "Deletes the variable",
+                "Changes the variable's data type"};
+
+        char Q3_explanation[4][150] =
+            {
+                "The variable name itself is used to access its value.",
+                "Correct - & gives the memory address of the variable.",
+                "The & operator does not delete variables.",
+                "The & operator does not change data types."};
+
+        training_answer(Q3, Q3_option, 2, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "What does the * operator do when used with a pointer?";
+
+        char Q4_option[4][60] =
+            {
+                "Gets the address stored in the pointer",
+                "Declares an integer variable",
+                "Accesses the value stored at the pointer's address",
+                "Deletes the pointer"};
+
+        char Q4_explanation[4][150] =
+            {
+                "The & operator is used to obtain an address.",
+                "The * symbol can declare a pointer, but that is not what it does when used with an existing pointer.",
+                "Correct - * dereferences the pointer and accesses the value stored at its address.",
+                "The * operator does not delete pointers."};
+
+        training_answer(Q4, Q4_option, 3, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "What will be the output?\n\n"
+            "int x = 10;\n"
+            "int *p = &x;\n"
+            "printf(\"%d\", *p);";
+
+        char Q5_option[4][60] =
+            {
+                "10",
+                "Address of x",
+                "0",
+                "Error"};
+
+        char Q5_explanation[4][150] =
+            {
+                "Correct - *p accesses the value stored at the address held by p, which is 10.",
+                "p contains the address, but *p accesses the value at that address.",
+                "x was initialized to 10, so dereferencing p does not produce 0.",
+                "The pointer declaration and dereference are valid C code."};
+
+        training_answer(Q5, Q5_option, 1, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "What will be the output?\n\n"
+            "int x = 7;\n"
+            "int *p = &x;\n"
+            "*p = 15;\n"
+            "printf(\"%d\", x);";
+
+        char Q6_option[4][60] =
+            {
+                "7",
+                "15",
+                "Address of x",
+                "Error"};
+
+        char Q6_explanation[4][150] =
+            {
+                "The value of x is changed through the pointer.",
+                "Correct - *p refers to x, so assigning 15 to *p changes x to 15.",
+                "The program prints x's value, not its address.",
+                "The pointer assignment is valid C code."};
+
+        training_answer(Q6, Q6_option, 2, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "Which statement correctly declares a pointer to an integer variable?";
+
+        char Q7_option[4][60] =
+            {
+                "int p;",
+                "int &p;",
+                "int *p;",
+                "pointer int p;"};
+
+        char Q7_explanation[4][150] =
+            {
+                "int p declares a normal integer variable.",
+                "& is not used this way to declare a pointer in C.",
+                "Correct - int *p declares p as a pointer to an integer.",
+                "pointer is not a C keyword for declaring pointers."};
+
+        training_answer(Q7, Q7_option, 3, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "If int x = 20; and int *p = &x;, which expression gives the value 20?";
+
+        char Q8_option[4][60] =
+            {
+                "&p",
+                "p",
+                "*p",
+                "&x"};
+
+        char Q8_explanation[4][150] =
+            {
+                "&p gives the address of the pointer variable itself.",
+                "p contains the address of x, not the value 20.",
+                "Correct - *p dereferences the pointer and gives the value stored in x, which is 20.",
+                "&x gives the address of x, not its value."};
+
+        training_answer(Q8, Q8_option, 3, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 int String_quizUnlocked = 0;
@@ -4601,7 +5618,7 @@ void StringTraining()
 
     while (1)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
 
         printf("\n============================================================\n");
         printf("                    SILENT CORRIDOR\n");
@@ -4617,26 +5634,26 @@ void StringTraining()
         printf("[0] Return to Topic List\n\n");
 
         printf("Your choice: ");
-        choice = menu_input(0, 2); // line 1685
+        choice = menu_input(0, 2); // line 3121
 
         if (choice == 0)
             return;
 
         if (choice == 1)
         {
-            String_lesson(); // line 3231
+            String_lesson(); // line 5662
             String_quizUnlocked = 1;
         }
 
         else if (choice == 2)
         {
             if (String_quizUnlocked == 1)
-                String_quiz(); // line 3323
+                String_quiz(); // line 5754
             else
             {
                 printf("\nKnowledge Battle is locked.\n");
                 printf("Complete the Knowledge Quest first.\n");
-                enter_to_continue(); // line 3384
+                enter_to_continue(); // line 5979
             }
         }
     }
@@ -4650,7 +5667,7 @@ void String_lesson()
 
     while (section >= 1 && section <= total_sections)
     {
-        clear_screen(); // line 198
+        clear_screen(); // line 212
         if (section == 1)
         {
             printf("============================================================\n");
@@ -4716,7 +5733,7 @@ void String_lesson()
         // ========================= NAVIGATION =========================
         printf("\n------------------------------------------------------------\n");
 
-        navigation = lesson_navigation(section, total_sections); // line 1649
+        navigation = lesson_navigation(section, total_sections); // line 3085
         if (navigation == 'N')
         {
             section++;
@@ -4728,7 +5745,7 @@ void String_lesson()
         else if (navigation == 'E')
         {
             printf("\nLesson Complete!\n");
-            enter_to_continue(); // line 3384
+            enter_to_continue(); // line 5979
             return;
         }
     }
@@ -4736,51 +5753,218 @@ void String_lesson()
 
 void String_quiz()
 {
-    clear_screen(); // line 198
+    int upper_limit = 4, lower_limit = 1;
+    int Time;
+    clear_screen(); // line 212
     printf("============================================================\n");
-    printf("                   STRING KNOWLEDGE BATTLE\n");
+    printf("                STRING KNOWLEDGE BATTLE\n");
     printf("============================================================\n\n");
 
-    char Q1[] =
-        "What will be the output?\n\n"
-        "char name[] = \"Code\";\n"
-        "printf(\"%c\", name[1]);";
+    //------------------------------question 1--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q1[] =
+            "Which is the correct way to declare a string in C?";
 
-    char Q1_option[4][60] =
-        {
-            "C",
-            "o",
-            "d",
-            "e"};
+        char Q1_option[4][60] =
+            {
+                "char name;",
+                "char name[20];",
+                "string name;",
+                "text name[20];"};
 
-    char Q1_explanation[4][150] =
-        {
-            "name[0] is C.",
-            "name[1] is o.",
-            "name[2] is d.",
-            "name[3] is e."};
+        char Q1_explanation[4][150] =
+            {
+                "char name can store only one character.",
+                "Correct - a string can be stored in a character array such as char name[20].",
+                "string is not a basic built-in data type in C.",
+                "text is not a C data type."};
 
-    traning_answer(Q1, Q1_option, 2, Q1_explanation); // line 1708
-    char Q2[] =
-        "What is wrong with this code?\n\n"
-        "char name[5] = \"Warrior\";";
+        training_answer(Q1, Q1_option, 2, Q1_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 
-    char Q2_option[4][60] =
-        {
-            "char cannot store strings",
-            "The array is too small",
-            "The quotation marks are wrong",
-            "Strings cannot be initialized during declaration"};
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q2[] =
+            "Which format specifier is used to print a string using printf()?";
 
-    char Q2_explanation[4][150] =
-        {
-            "char arrays can store strings.",
-            "warrior needs 8 elements including '\\0'.",
-            "the quotation marks are valid.",
-            "strings can initialize char arrays."};
+        char Q2_option[4][60] =
+            {
+                "%c",
+                "%d",
+                "%s",
+                "%f"};
 
-    traning_answer(Q2, Q2_option, 2, Q2_explanation); // line 1708
-    enter_to_continue();                              // line 3384
+        char Q2_explanation[4][150] =
+            {
+                "%c is used to print a single character.",
+                "%d is used to print an integer.",
+                "Correct - %s is used to print a string.",
+                "%f is used to print a floating-point value."};
+
+        training_answer(Q2, Q2_option, 3, Q2_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q3[] =
+            "What is the correct way to initialize a string with \"Hello\"?";
+
+        char Q3_option[4][60] =
+            {
+                "char str = \"Hello\";",
+                "char str[] = \"Hello\";",
+                "string str = \"Hello\";",
+                "char str[5] = \"Hello\";"};
+
+        char Q3_explanation[4][150] =
+            {
+                "A single char variable cannot store an entire string.",
+                "Correct - char str[] creates a character array and stores the string Hello.",
+                "string is not a basic C data type.",
+                "Hello needs 6 characters in the array when the null character is included."};
+
+        training_answer(Q3, Q3_option, 2, Q3_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q4[] =
+            "What is the index of the first character in a C string?";
+
+        char Q4_option[4][60] =
+            {
+                "0",
+                "1",
+                "-1",
+                "2"};
+
+        char Q4_explanation[4][150] =
+            {
+                "Correct - C arrays start from index 0.",
+                "Index 1 refers to the second character.",
+                "Negative indexing is not used for the first character.",
+                "Index 2 refers to the third character."};
+
+        training_answer(Q4, Q4_option, 1, Q4_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    //------------------------------question 2--------------------------------
+    srand(time(NULL));
+    Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
+
+    if (Time == 1)
+    {
+        clear_screen(); // line 212
+        char Q5[] =
+            "What will be the output?\n\n"
+            "char name[] = \"Sam\";\n"
+            "printf(\"%c\", name[1]);";
+
+        char Q5_option[4][60] =
+            {
+                "S",
+                "a",
+                "m",
+                "Sam"};
+
+        char Q5_explanation[4][150] =
+            {
+                "name[0] contains S.",
+                "Correct - name[1] contains a.",
+                "name[2] contains m.",
+                "%c prints one character, not the whole string."};
+
+        training_answer(Q5, Q5_option, 2, Q5_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 2)
+    {
+        clear_screen(); // line 212
+        char Q6[] =
+            "What will be the output?\n\n"
+            "char word[] = \"Code\";\n"
+            "printf(\"%s\", word);";
+
+        char Q6_option[4][60] =
+            {
+                "C",
+                "Code",
+                "word",
+                "Error"};
+
+        char Q6_explanation[4][150] =
+            {
+                "%s prints the complete string, not only the first character.",
+                "Correct - %s prints the characters stored in the string.",
+                "word is the variable name, not its output.",
+                "The declaration and printf statement are valid C code."};
+
+        training_answer(Q6, Q6_option, 2, Q6_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 3)
+    {
+        clear_screen(); // line 212
+        char Q7[] =
+            "What will be the output?\n\n"
+            "char text[] = \"Cat\";\n"
+            "text[0] = 'B';\n"
+            "printf(\"%s\", text);";
+
+        char Q7_option[4][60] =
+            {
+                "Cat",
+                "Bat",
+                "B",
+                "Error"};
+
+        char Q7_explanation[4][150] =
+            {
+                "The first character is changed from C to B.",
+                "Correct - text[0] changes C to B, making the string Bat.",
+                "Changing one character does not remove the remaining characters.",
+                "The character array can be modified."};
+
+        training_answer(Q7, Q7_option, 2, Q7_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
+
+    else if (Time == 4)
+    {
+        clear_screen(); // line 212
+        char Q8[] =
+            "Which statement correctly stores the word \"Apple\" in a character array?";
+
+        char Q8_option[4][60] =
+            {
+                "char fruit[5] = \"Apple\";",
+                "char fruit[6] = \"Apple\";",
+                "char fruit = \"Apple\";",
+                "string fruit[6] = \"Apple\";"};
+
+        char Q8_explanation[4][150] =
+            {
+                "The array also needs space for the null character.",
+                "Correct - Apple has 5 characters plus the null character, so 6 spaces are needed.",
+                "A char variable can store only one character.",
+                "string is not a basic C data type."};
+
+        training_answer(Q8, Q8_option, 2, Q8_explanation); // line 3145
+        enter_to_continue();                               // line 5979
+    }
 }
 
 //__________________UTILITY_____________
@@ -4810,14 +5994,14 @@ char continue_or_back()
         {
             if (hold == 'B' || hold == 'b')
             {
-                flush_input(); // line 3378
+                flush_input(); // line 5972
                 return 'R';
             }
             return 'n'; // hudai kono kam nai
         }
         else
         {
-            flush_input(); // line 3378
+            flush_input(); // line 5972
             printf("invalid input, \n Enter corectly :");
         }
     }
