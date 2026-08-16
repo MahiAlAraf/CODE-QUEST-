@@ -3495,7 +3495,7 @@ void V_D_quiz()
     }
 
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
     if (Time == 1)
     {
@@ -3918,7 +3918,7 @@ void Condition_quiz()
     }
 
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
     if (Time == 1)
     {
@@ -4344,7 +4344,7 @@ void Loop_quiz()
         enter_to_continue();                               // line 5979
     }
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
 
     if (Time == 1)
@@ -4720,7 +4720,7 @@ void Array_quiz()
     }
 
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
 
     if (Time == 1)
@@ -5136,7 +5136,7 @@ void Function_quiz()
     }
 
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
 
     if (Time == 1)
@@ -5504,7 +5504,7 @@ void Pointer_quiz()
     }
 
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
 
     if (Time == 1)
@@ -5860,7 +5860,7 @@ void String_quiz()
     }
 
     //------------------------------question 2--------------------------------
-    srand(time(NULL));
+    
     Time = rand() % (upper_limit - lower_limit + 1) + lower_limit;
 
     if (Time == 1)
